@@ -1,0 +1,2722 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>NineteenTech – Eskul Robotik MAN 19 Jakarta Selatan</title>
+<link rel="icon" type="image/jpeg" href="logo.jpg"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --ink:#0f172a;--ink2:#334155;--muted:#64748b;
+  --bg:#f8fafc;--card:#ffffff;
+  --b1:#e2e8f0;--b2:#cbd5e1;
+  --blue:#2563eb;--blue2:#1d4ed8;--cyan:#0284c7;
+  --green:#16a34a;--red:#dc2626;--yellow:#d97706;--purple:#7c3aed;
+  --r:12px;--r2:16px;--r3:24px;
+  --sh:0 1px 3px rgba(0,0,0,.06),0 4px 16px rgba(0,0,0,.04);
+  --sh-lg:0 10px 30px rgba(0,0,0,.08);
+}
+html{font-size:15px;scroll-behavior:smooth}
+body{
+  font-family:'Plus Jakarta Sans',system-ui,sans-serif;
+  background:#090d1a;color:var(--ink);
+  min-height:100vh;-webkit-font-smoothing:antialiased;
+}
+h1,h2,h3,h4{font-family:'Space Grotesk',sans-serif}
+code,pre,.font-mono{font-family:'JetBrains Mono',monospace}
+::-webkit-scrollbar{width:5px;height:5px}
+::-webkit-scrollbar-track{background:rgba(255,255,255,.02)}
+::-webkit-scrollbar-thumb{background:rgba(59,130,246,.25);border-radius:99px}
+::-webkit-scrollbar-thumb:hover{background:rgba(59,130,246,.45)}
+.hidden{display:none!important}
+input,select,button,textarea{font-family:inherit}
+
+/* ═════════════════════════════════════════════
+   LANDING PAGE (CLEAN, MODERN, AUTHENTIC)
+═════════════════════════════════════════════ */
+#landingPage{
+  min-height:100vh;position:relative;overflow-x:hidden;
+  background:linear-gradient(180deg, #0d1527 0%, #080d1a 60%, #050811 100%);
+  display:flex;flex-direction:column;
+}
+
+.land-grid{
+  position:absolute;inset:0;
+  background-image:
+    linear-gradient(rgba(255,255,255,.025) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,.025) 1px, transparent 1px);
+  background-size:40px 40px;
+  pointer-events:none;
+}
+
+/* ── NAV BAR ── */
+.land-nav{
+  position:relative;z-index:20;
+  padding:18px 36px;
+  display:flex;align-items:center;justify-content:space-between;
+  border-bottom:1px solid rgba(255,255,255,.07);
+  background:rgba(9,13,26,.85);backdrop-filter:blur(10px);
+}
+@media(max-width:768px){.land-nav{padding:14px 18px}}
+
+.land-logo{display:flex;align-items:center;gap:12px;cursor:pointer;user-select:none}
+.logo-wrap{
+  width:42px;height:42px;border-radius:50%;
+  background:#ffffff;padding:2px;
+  display:flex;align-items:center;justify-content:center;
+  box-shadow:0 0 0 2px rgba(37,99,235,.45);
+  flex-shrink:0;overflow:hidden;
+}
+.brand-logo-img{
+  width:100%;height:100%;object-fit:cover;border-radius:50%;
+  display:block;
+}
+.land-logo h1{
+  color:#fff;font-size:1.1rem;font-weight:700;line-height:1.2;
+}
+.land-logo span{
+  color:rgba(255,255,255,.5);font-size:.68rem;font-weight:500;display:block;
+}
+
+.nav-actions{display:flex;align-items:center;gap:10px}
+.btn-nav-info{
+  padding:7px 15px;border-radius:8px;
+  background:rgba(255,255,255,.06);color:rgba(255,255,255,.8);
+  border:1px solid rgba(255,255,255,.12);
+  font-size:.8rem;font-weight:600;cursor:pointer;transition:all .18s;
+}
+.btn-nav-info:hover{
+  background:rgba(255,255,255,.12);color:#fff;border-color:rgba(255,255,255,.25);
+}
+.btn-absen-pill{
+  display:inline-flex;align-items:center;gap:7px;
+  padding:8px 18px;border-radius:8px;
+  background:linear-gradient(135deg,#2563eb,#1d4ed8);
+  color:#fff;border:none;font-size:.82rem;font-weight:700;cursor:pointer;
+  transition:all .18s;box-shadow:0 2px 10px rgba(37,99,235,.35);
+}
+.btn-absen-pill:hover{
+  background:linear-gradient(135deg,#1d4ed8,#1e40af);
+  transform:translateY(-1px);box-shadow:0 4px 16px rgba(37,99,235,.45);
+}
+
+/* ── HERO SECTION ── */
+.land-hero{
+  position:relative;z-index:10;flex:1;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  padding:46px 20px 32px;text-align:center;max-width:760px;margin:0 auto;width:100%;
+}
+
+/* Logo Crest Emblem */
+.hero-crest-container{
+  width:108px;height:108px;margin:0 auto 22px;
+  border-radius:50%;background:#ffffff;padding:3px;
+  box-shadow:0 0 0 3px #2563eb, 0 8px 30px rgba(0,0,0,.45);
+  cursor:pointer;transition:transform .2s ease;overflow:hidden;
+}
+.hero-crest-container:hover{transform:scale(1.04)}
+.hero-crest-img{
+  width:100%;height:100%;object-fit:cover;border-radius:50%;display:block;
+}
+
+.chip{
+  display:inline-flex;align-items:center;gap:7px;
+  padding:5px 14px;border-radius:99px;
+  background:rgba(37,99,235,.14);border:1px solid rgba(59,130,246,.3);
+  color:#93c5fd;font-size:.74rem;font-weight:600;
+  margin-bottom:18px;
+}
+.chip-dot{
+  width:6px;height:6px;border-radius:50%;
+  background:#38bdf8;box-shadow:0 0 8px #38bdf8;
+}
+
+.land-hero h1{
+  font-size:clamp(2rem, 4.5vw, 3.2rem);
+  font-weight:800;color:#ffffff;line-height:1.15;
+  letter-spacing:-.01em;margin-bottom:14px;
+}
+.grad-brand{
+  color:#60a5fa;
+}
+.land-hero p{
+  color:rgba(255,255,255,.65);font-size:.98rem;
+  max-width:520px;line-height:1.65;margin-bottom:28px;
+}
+
+.hero-btns{display:flex;gap:10px;flex-wrap:wrap;justify-content:center}
+.btn-main{
+  display:inline-flex;align-items:center;gap:10px;
+  padding:12px 26px;border-radius:12px;font-size:.9rem;font-weight:700;
+  cursor:pointer;background:linear-gradient(135deg,#2563eb,#1d4ed8);
+  color:#fff;border:none;box-shadow:0 4px 16px rgba(37,99,235,.35);
+  transition:all .18s ease;
+}
+.btn-main:hover{
+  background:linear-gradient(135deg,#1d4ed8,#1e40af);
+  transform:translateY(-1px);box-shadow:0 6px 20px rgba(37,99,235,.45);
+}
+.btn-sec{
+  display:inline-flex;align-items:center;gap:10px;
+  padding:12px 22px;border-radius:12px;font-size:.9rem;font-weight:600;
+  cursor:pointer;background:rgba(255,255,255,.06);color:#fff;
+  border:1px solid rgba(255,255,255,.14);transition:all .18s ease;
+}
+.btn-sec:hover{
+  background:rgba(255,255,255,.12);border-color:rgba(255,255,255,.25);
+  transform:translateY(-1px);
+}
+.btn-ic{display:inline-flex;align-items:center;justify-content:center}
+
+/* ── 3 INFO CARDS ── */
+.pillars-grid{
+  display:grid;grid-template-columns:repeat(3, 1fr);gap:16px;
+  max-width:860px;width:100%;margin:16px auto 36px;padding:0 18px;
+  position:relative;z-index:10;
+}
+@media(max-width:768px){.pillars-grid{grid-template-columns:1fr}}
+
+.pillar-card{
+  background:rgba(255,255,255,.03);
+  border:1px solid rgba(255,255,255,.08);
+  border-radius:var(--r2);padding:20px;
+  text-align:left;backdrop-filter:blur(10px);
+  transition:all .2s ease;
+}
+.pillar-card:hover{
+  border-color:rgba(59,130,246,.35);
+  background:rgba(255,255,255,.06);
+  transform:translateY(-3px);
+  box-shadow:0 10px 24px -5px rgba(0,0,0,.4);
+}
+.pillar-icon-box{
+  width:44px;height:44px;border-radius:12px;
+  display:inline-flex;align-items:center;justify-content:center;
+  margin-bottom:14px;transition:all .2s ease;
+}
+.pillar-icon-blue{
+  background:linear-gradient(135deg,rgba(59,130,246,.25),rgba(37,99,235,.12));
+  border:1px solid rgba(59,130,246,.4);color:#60a5fa;
+  box-shadow:0 4px 14px rgba(37,99,235,.2);
+}
+.pillar-icon-cyan{
+  background:linear-gradient(135deg,rgba(6,182,212,.25),rgba(14,165,233,.12));
+  border:1px solid rgba(6,182,212,.4);color:#38bdf8;
+  box-shadow:0 4px 14px rgba(6,182,212,.2);
+}
+.pillar-icon-purple{
+  background:linear-gradient(135deg,rgba(168,85,247,.25),rgba(236,72,153,.12));
+  border:1px solid rgba(168,85,247,.4);color:#c084fc;
+  box-shadow:0 4px 14px rgba(168,85,247,.2);
+}
+.pillar-card:hover .pillar-icon-box{transform:translateY(-2px) scale(1.05)}
+.pillar-title{font-size:.95rem;font-weight:700;color:#fff;margin-bottom:6px}
+.pillar-desc{font-size:.8rem;color:rgba(255,255,255,.6);line-height:1.6}
+
+/* ── STATS DOCK ── */
+.land-stats{
+  position:relative;z-index:10;
+  display:grid;grid-template-columns:repeat(4, 1fr);
+  max-width:860px;width:100%;margin:0 auto 24px;
+  background:rgba(15,23,42,.65);
+  border:1px solid rgba(255,255,255,.09);
+  border-radius:var(--r2);overflow:hidden;
+  box-shadow:0 10px 30px rgba(0,0,0,.35);
+}
+@media(max-width:768px){.land-stats{grid-template-columns:1fr 1fr}}
+.lstat{
+  padding:16px 20px;text-align:center;
+  border-right:1px solid rgba(255,255,255,.07);
+}
+.lstat:last-child{border-right:none}
+@media(max-width:768px){
+  .lstat:nth-child(2){border-right:none}
+  .lstat:nth-child(1),.lstat:nth-child(2){border-bottom:1px solid rgba(255,255,255,.07)}
+}
+.lstat .lv{font-size:1.45rem;font-weight:800;color:#fff;font-family:'Space Grotesk'}
+.lstat .ll{font-size:.68rem;color:rgba(255,255,255,.45);margin-top:3px;font-weight:600}
+.lstat a{text-decoration:none}
+.lstat a .lv{transition:color .18s;color:#60a5fa}
+.lstat a:hover .lv{text-decoration:underline}
+
+.land-foot{
+  position:relative;z-index:10;padding:16px;text-align:center;
+  font-size:.72rem;color:rgba(255,255,255,.35);border-top:1px solid rgba(255,255,255,.05);
+}
+
+/* ═════════════════════════════════════════════
+   ABSEN PAGE (STUDENT CHECK-IN FLOW)
+═════════════════════════════════════════════ */
+#absenPage{
+  min-height:100vh;
+  background:linear-gradient(180deg, #0d1527 0%, #080d1a 100%);
+  display:flex;flex-direction:column;position:relative;
+}
+.absen-nav{
+  padding:14px 22px;display:flex;align-items:center;justify-content:space-between;
+  border-bottom:1px solid rgba(255,255,255,.08);
+  background:rgba(9,13,26,.85);backdrop-filter:blur(10px);
+  position:sticky;top:0;z-index:30;
+}
+.absen-brand{display:flex;align-items:center;gap:11px;color:#fff}
+.absen-brand .lw{
+  width:36px;height:36px;border-radius:50%;background:#ffffff;
+  padding:2px;box-shadow:0 0 0 2px rgba(37,99,235,.45);
+  display:flex;align-items:center;justify-content:center;
+  overflow:hidden;flex-shrink:0;
+}
+.absen-brand h2{font-size:.95rem;font-weight:700}
+.absen-brand span{font-size:.66rem;color:rgba(255,255,255,.45);display:block}
+.btn-back{
+  display:inline-flex;align-items:center;gap:6px;
+  padding:6px 14px;border-radius:8px;background:rgba(255,255,255,.07);
+  color:rgba(255,255,255,.75);border:1px solid rgba(255,255,255,.12);
+  font-size:.78rem;font-weight:600;cursor:pointer;transition:all .18s;
+}
+.btn-back:hover{background:rgba(255,255,255,.14);color:#fff}
+
+.absen-body{flex:1;overflow-y:auto;padding:24px 18px 50px}
+.absen-inner{max-width:440px;margin:0 auto}
+
+/* Steps Indicator */
+.steps{display:flex;align-items:center;margin-bottom:22px}
+.step{display:flex;align-items:center;gap:7px;font-size:.76rem;font-weight:600;color:rgba(255,255,255,.35)}
+.step .sn{
+  width:24px;height:24px;border-radius:50%;background:rgba(255,255,255,.08);
+  display:flex;align-items:center;justify-content:center;font-size:.72rem;flex-shrink:0;
+}
+.step.active{color:#ffffff}
+.step.active .sn{
+  background:#2563eb;color:#fff;font-weight:700;
+}
+.step.done{color:#4ade80}
+.step.done .sn{background:rgba(74,222,128,.18);color:#4ade80}
+.step-line{flex:1;height:2px;background:rgba(255,255,255,.08);margin:0 8px;border-radius:99px}
+
+/* Glass Card */
+.glass{
+  background:rgba(15,23,42,.7);
+  border:1px solid rgba(255,255,255,.09);
+  backdrop-filter:blur(14px);border-radius:var(--r2);
+  padding:22px;color:#fff;margin-bottom:14px;
+  box-shadow:0 8px 24px rgba(0,0,0,.25);
+}
+.glass h3{font-size:1.02rem;font-weight:700;margin-bottom:12px;color:#fff}
+.glabel{
+  font-size:.7rem;text-transform:uppercase;letter-spacing:.06em;
+  color:rgba(255,255,255,.45);margin-bottom:8px;font-weight:700;
+}
+
+/* Kelas grid */
+.kg{display:grid;grid-template-columns:repeat(3, 1fr);gap:8px}
+.kchip{
+  padding:12px 6px;border-radius:10px;
+  border:1.5px solid rgba(255,255,255,.09);background:rgba(255,255,255,.03);
+  text-align:center;font-size:.85rem;font-weight:700;cursor:pointer;
+  transition:all .16s;color:rgba(255,255,255,.7);
+}
+.kchip:hover{
+  border-color:rgba(59,130,246,.5);color:#fff;background:rgba(37,99,235,.12);
+}
+.kchip.on{
+  border-color:#60a5fa;background:#2563eb;color:#fff;
+}
+
+/* Search Box */
+.search-box input{
+  width:100%;padding:10px 14px;border-radius:9px;
+  background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);
+  color:#fff;font-size:.84rem;outline:none;transition:all .18s;
+}
+.search-box input:focus{
+  border-color:#60a5fa;background:rgba(255,255,255,.09);
+}
+
+/* Nama list */
+.nlist{display:flex;flex-direction:column;gap:6px;max-height:230px;overflow-y:auto;padding-right:3px}
+.nitem{
+  display:flex;align-items:center;justify-content:space-between;
+  padding:10px 12px;border-radius:10px;
+  border:1px solid rgba(255,255,255,.08);cursor:pointer;
+  transition:all .16s;background:rgba(255,255,255,.025);
+}
+.nitem:hover{
+  border-color:rgba(59,130,246,.4);background:rgba(37,99,235,.1);
+}
+.nitem.on{
+  border-color:#60a5fa;background:rgba(37,99,235,.2);
+}
+.nitem-left{display:flex;align-items:center;gap:10px}
+.nav2{
+  width:32px;height:32px;border-radius:50%;
+  background:linear-gradient(135deg,#2563eb,#1d4ed8);
+  display:flex;align-items:center;justify-content:center;
+  font-size:.72rem;font-weight:700;color:#fff;flex-shrink:0;
+}
+.nitem .nn{font-size:.85rem;font-weight:600;color:#fff}
+.nitem .nk{font-size:.68rem;color:rgba(255,255,255,.45);margin-top:1px}
+.nchk{
+  width:18px;height:18px;border-radius:50%;
+  border:1.5px solid rgba(255,255,255,.2);
+  display:flex;align-items:center;justify-content:center;
+  font-size:.65rem;color:transparent;transition:all .16s;
+}
+.nitem.on .nchk{background:#3b82f6;border-color:#3b82f6;color:#fff;font-weight:800}
+
+/* Profil Banner */
+.prof-banner{
+  background:rgba(37,99,235,.15);
+  border:1px solid rgba(59,130,246,.25);border-radius:var(--r2);
+  padding:16px;display:flex;align-items:center;gap:12px;color:#fff;margin-bottom:12px;
+}
+.prof-banner .av{
+  width:46px;height:46px;border-radius:12px;flex-shrink:0;
+  background:#2563eb;
+  display:flex;align-items:center;justify-content:center;
+  font-size:1.1rem;font-weight:800;
+}
+.prof-banner .pn{font-size:.98rem;font-weight:700}
+.prof-banner .pm{font-size:.72rem;color:rgba(255,255,255,.55);margin-top:2px}
+
+/* Sesi Card */
+.sesi-card{
+  background:rgba(37,99,235,.12);
+  border:1px solid rgba(59,130,246,.2);border-radius:var(--r2);
+  padding:16px;color:#fff;margin-bottom:12px;text-align:center;
+}
+.sesi-card .sc-num{font-size:.68rem;text-transform:uppercase;letter-spacing:.06em;color:#60a5fa;margin-bottom:4px;font-weight:700}
+.sesi-card .sc-title{font-size:.98rem;font-weight:700;margin-bottom:3px}
+.sesi-card .sc-materi{font-size:.78rem;color:rgba(255,255,255,.6);line-height:1.5}
+
+/* Code Input Box */
+.code-in{
+  width:100%;padding:14px;border-radius:10px;
+  border:1.5px solid rgba(255,255,255,.16);background:rgba(255,255,255,.07);
+  color:#fff;font-size:1.45rem;font-weight:800;letter-spacing:.22em;
+  text-align:center;text-transform:uppercase;outline:none;
+  font-family:'JetBrains Mono','Space Grotesk',monospace;transition:all .18s;
+}
+.code-in:focus{
+  border-color:#60a5fa;background:rgba(255,255,255,.1);
+}
+.code-in::placeholder{font-size:.85rem;font-weight:400;letter-spacing:.05em;color:rgba(255,255,255,.25)}
+
+.btn-ci{
+  width:100%;margin-top:12px;padding:14px;border-radius:10px;
+  background:linear-gradient(135deg,#2563eb,#1d4ed8);color:#fff;
+  font-size:.94rem;font-weight:700;border:none;cursor:pointer;
+  transition:all .18s;
+}
+.btn-ci:hover{
+  background:linear-gradient(135deg,#1d4ed8,#1e40af);
+}
+.ci-msg{margin-top:10px;padding:11px;border-radius:9px;font-size:.82rem;font-weight:600;text-align:center;line-height:1.5}
+.ci-ok{background:rgba(74,222,128,.14);border:1px solid rgba(74,222,128,.3);color:#86efac}
+.ci-err{background:rgba(239,68,68,.14);border:1px solid rgba(239,68,68,.3);color:#fca5a5}
+.ci-warn{background:rgba(251,191,36,.12);border:1px solid rgba(251,191,36,.25);color:#fde68a}
+
+/* Radial Gauge Ring */
+.ring-row{display:flex;gap:10px;margin-bottom:12px;flex-wrap:wrap}
+.ring-card{
+  flex:1;min-width:130px;background:rgba(15,23,42,.7);
+  border:1px solid rgba(255,255,255,.09);border-radius:var(--r);
+  padding:14px;display:flex;align-items:center;gap:12px;color:#fff;
+}
+.pct-ring{position:relative;width:56px;height:56px;flex-shrink:0}
+.pct-ring svg{transform:rotate(-90deg)}
+.rnum{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:.86rem;font-weight:800}
+.mini-st{display:grid;grid-template-columns:1fr 1fr;gap:6px}
+.mst{background:rgba(255,255,255,.06);border-radius:7px;padding:5px 8px;text-align:center}
+.mst .mv{font-size:1rem;font-weight:700}
+.mst .ml{font-size:.62rem;opacity:.5;margin-top:1px;text-transform:uppercase}
+
+.hist-row{
+  display:flex;align-items:center;justify-content:space-between;
+  padding:9px 0;border-bottom:1px solid rgba(255,255,255,.06);font-size:.8rem;
+}
+.hist-row:last-child{border:none}
+.hist-row .hn{color:rgba(255,255,255,.85);font-weight:600}
+.hist-row .hd{font-size:.68rem;color:rgba(255,255,255,.4);margin-top:1px}
+
+/* Badges */
+.bs2{display:inline-flex;align-items:center;padding:2px 8px;border-radius:99px;font-size:.68rem;font-weight:700}
+.bh{background:rgba(74,222,128,.14);color:#86efac}
+.bi{background:rgba(251,191,36,.14);color:#fde68a}
+.bsa{background:rgba(96,165,250,.14);color:#93c5fd}
+.ba{background:rgba(239,68,68,.14);color:#fca5a5}
+.bg2{background:rgba(74,222,128,.14);color:#86efac}
+.bt2{background:rgba(239,68,68,.14);color:#fca5a5}
+
+/* ═════════════════════════════════════════════
+   ADMIN APP (CLEAN SLATE DASHBOARD)
+═════════════════════════════════════════════ */
+#appPage{
+  min-height:100vh;background:#f8fafc;display:flex;flex-direction:column;
+}
+.topbar{
+  background:#ffffff;border-bottom:1px solid var(--b1);
+  padding:12px 24px;display:flex;align-items:center;justify-content:space-between;
+  position:sticky;top:0;z-index:40;
+}
+.tb-brand{display:flex;align-items:center;gap:12px}
+.lw2{
+  width:36px;height:36px;border-radius:50%;background:#ffffff;
+  padding:2px;box-shadow:0 0 0 2px rgba(37,99,235,.4);
+  display:flex;align-items:center;justify-content:center;
+  overflow:hidden;flex-shrink:0;
+}
+.tb-brand h2{font-size:1rem;font-weight:700;color:var(--ink)}
+.tb-brand span{font-size:.68rem;color:var(--muted);display:block}
+.tb-right{display:flex;align-items:center;gap:12px}
+.tb-user{text-align:right}
+.tb-user strong{display:block;font-size:.82rem;font-weight:700;color:var(--ink)}
+.tb-user span{font-size:.66rem;color:var(--muted)}
+.av-adm{
+  width:34px;height:34px;border-radius:8px;
+  background:#2563eb;
+  display:flex;align-items:center;justify-content:center;
+  color:#fff;font-size:.82rem;font-weight:700;
+}
+.btn-lo{
+  padding:6px 14px;border-radius:7px;background:var(--bg);
+  border:1px solid var(--b1);color:var(--ink2);font-size:.78rem;
+  font-weight:600;cursor:pointer;transition:all .16s;
+}
+.btn-lo:hover{background:#fee2e2;color:#dc2626;border-color:#fca5a5}
+
+.layout{display:flex;flex:1}
+.sidebar{
+  width:230px;background:#ffffff;border-right:1px solid var(--b1);
+  padding:14px 0;display:flex;flex-direction:column;flex-shrink:0;
+}
+.sb-profile{padding:12px 16px 16px;border-bottom:1px solid var(--b1);margin-bottom:6px;display:flex;align-items:center;gap:10px}
+.avb{
+  width:38px;height:38px;border-radius:50%;
+  padding:2px;background:#fff;box-shadow:0 0 0 2px rgba(37,99,235,.35);
+  flex-shrink:0;overflow:hidden;
+}
+.sbn2{font-size:.84rem;font-weight:700;color:var(--ink)}
+.sbr{font-size:.68rem;color:var(--muted)}
+
+.sbnav{list-style:none}
+.sbnav li{margin:2px 8px}
+.sbsec{font-size:.62rem;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);padding:10px 12px 4px;font-weight:700}
+.nl{
+  display:flex;align-items:center;gap:9px;padding:8px 12px;border-radius:8px;
+  cursor:pointer;font-size:.83rem;color:var(--ink2);font-weight:600;
+  transition:all .14s;user-select:none;
+}
+.nl:hover{background:#f1f5f9;color:var(--ink)}
+.nl.on{
+  background:#eff6ff;
+  color:var(--blue);font-weight:700;border-left:3px solid var(--blue);
+}
+.nl .ni{font-size:.95rem;width:20px;text-align:center}
+.content{flex:1;padding:22px;overflow-y:auto}
+@media(max-width:768px){
+  .sidebar{width:56px}
+  .sbnav .nav-text,.sb-profile .sbn2,.sb-profile .sbr,.sbsec{display:none}
+  .sb-profile{padding:10px;justify-content:center}
+  .nl{justify-content:center;padding:10px}
+  .content{padding:14px}
+}
+
+/* Buttons */
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:6px;
+  padding:8px 16px;border:none;border-radius:8px;font-size:.8rem;font-weight:700;
+  cursor:pointer;transition:all .16s;font-family:inherit;
+}
+.btn-p{background:#2563eb;color:#fff}
+.btn-p:hover{background:#1d4ed8}
+.btn-ok{background:#16a34a;color:#fff}
+.btn-red{background:#dc2626;color:#fff}
+.btn-ghost{background:transparent;color:var(--ink2);border:1px solid var(--b1)}
+.btn-ghost:hover{background:var(--bg);border-color:var(--b2)}
+.btn-sm{padding:5px 11px;font-size:.74rem;border-radius:6px}
+.btn-xs{padding:3px 8px;font-size:.7rem;border-radius:5px}
+
+/* Cards & Headings */
+.sh{display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:18px;flex-wrap:wrap;gap:8px}
+.sh h2{font-size:1.15rem;font-weight:800;color:var(--ink)}
+.sh p{font-size:.78rem;color:var(--muted);margin-top:2px}
+.card{
+  background:var(--card);border-radius:var(--r);box-shadow:var(--sh);
+  border:1px solid var(--b1);overflow:hidden;margin-bottom:16px;
+}
+.ch{
+  padding:13px 18px;border-bottom:1px solid var(--b1);
+  display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;
+}
+.ch h3{font-size:.88rem;font-weight:700;color:var(--ink)}
+.cb{padding:16px 18px}
+
+/* Table */
+.tw{overflow-x:auto}
+table{width:100%;border-collapse:collapse;font-size:.8rem}
+th{
+  background:#f8fafc;color:var(--ink2);font-weight:700;padding:9px 12px;
+  text-align:left;border-bottom:1.5px solid var(--b1);white-space:nowrap;
+  font-size:.72rem;text-transform:uppercase;letter-spacing:.04em;
+}
+td{padding:10px 12px;border-bottom:1px solid var(--b1);vertical-align:middle;color:var(--ink)}
+tr:last-child td{border-bottom:none}
+tr:hover td{background:#f8fafc}
+.av2{
+  width:28px;height:28px;background:#2563eb;
+  border-radius:50%;display:inline-flex;align-items:center;justify-content:center;
+  color:#fff;font-size:.68rem;font-weight:700;flex-shrink:0;
+}
+.tdn{display:flex;align-items:center;gap:9px}
+
+/* Stat Grid */
+.sg{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:12px;margin-bottom:18px}
+.sc{
+  background:var(--card);border-radius:var(--r);box-shadow:var(--sh);
+  border:1px solid var(--b1);padding:16px;display:flex;flex-direction:column;gap:10px;
+  position:relative;overflow:hidden;
+}
+.sc::before{content:'';position:absolute;top:0;left:0;right:0;height:2.5px}
+.sc.c-blue::before{background:#2563eb}
+.sc.c-green::before{background:#16a34a}
+.sc.c-yellow::before{background:#d97706}
+.sc.c-red::before{background:#dc2626}
+.sc.c-purple::before{background:#7c3aed}
+.si2{width:38px;height:38px;border-radius:9px;display:flex;align-items:center;justify-content:center;font-size:1.1rem}
+.si-b{background:#dbeafe}.si-g{background:#dcfce7}.si-y{background:#fef3c7}.si-r{background:#fee2e2}.si-p{background:#ede9fe}
+.sv{font-size:1.5rem;font-weight:800;color:var(--ink);line-height:1;font-family:'Space Grotesk'}
+.sl{font-size:.7rem;color:var(--muted);font-weight:600}
+@media(max-width:480px){.sg{grid-template-columns:1fr 1fr}}
+
+/* Active Session Banner */
+.sess-banner{
+  background:linear-gradient(135deg,#064e3b,#065f46);
+  border:1px solid rgba(52,211,153,.3);border-radius:var(--r);
+  padding:14px 18px;display:flex;align-items:center;gap:12px;
+  margin-bottom:16px;color:#fff;
+}
+.pulse-dot{
+  width:9px;height:9px;border-radius:50%;background:#34d399;flex-shrink:0;
+}
+.sess-banner .st{font-weight:700;font-size:.9rem;color:#fff}
+.sess-banner .sk{font-size:.74rem;color:rgba(255,255,255,.7);margin-top:2px}
+.kode-badge{
+  padding:6px 14px;background:rgba(0,0,0,.3);border-radius:6px;
+  font-family:'JetBrains Mono',monospace;font-size:1rem;font-weight:800;
+  letter-spacing:.12em;color:#fde68a;flex-shrink:0;border:1px solid rgba(253,230,138,.2);
+}
+
+/* Modals */
+.mbk{
+  position:fixed;inset:0;background:rgba(0,0,0,.5);
+  z-index:200;display:flex;align-items:center;justify-content:center;
+  padding:20px;backdrop-filter:blur(4px);
+}
+.modal{
+  background:var(--card);border-radius:var(--r2);
+  box-shadow:0 20px 50px rgba(0,0,0,.2);padding:24px;
+  width:100%;max-width:500px;max-height:90vh;overflow-y:auto;
+}
+.modal h3{font-size:1.05rem;font-weight:700;color:var(--ink);margin-bottom:14px}
+
+/* Enhanced Info Modal */
+.modal-info-custom{
+  max-width:580px;background:#fff;border-radius:20px;
+  box-shadow:0 25px 60px -15px rgba(0,0,0,.3),0 0 0 1px rgba(0,0,0,.06);
+  padding:26px;position:relative;overflow:hidden;
+}
+.modal-info-custom::before{
+  content:'';position:absolute;top:0;left:0;right:0;height:4px;
+  background:linear-gradient(90deg,#2563eb,#38bdf8,#818cf8);
+}
+.info-header{
+  display:flex;align-items:center;gap:15px;margin-bottom:20px;
+  padding-bottom:16px;border-bottom:1px solid #f1f5f9;
+}
+.info-logo-badge{
+  width:52px;height:52px;border-radius:50%;padding:2px;
+  background:#fff;border:2px solid #3b82f6;box-shadow:0 4px 14px rgba(37,99,235,.2);
+  flex-shrink:0;overflow:hidden;
+}
+.info-logo-badge img{width:100%;height:100%;object-fit:cover;border-radius:50%}
+.info-header-meta h3{margin:0 0 2px 0;font-size:1.15rem;font-weight:800;color:#0f172a;letter-spacing:-.01em}
+.info-header-meta .sub{font-size:.76rem;color:#64748b;display:block}
+.info-tags{display:flex;gap:6px;flex-wrap:wrap;margin-top:6px}
+.info-tag{
+  font-size:.68rem;font-weight:700;padding:2px 8px;border-radius:20px;
+  display:inline-flex;align-items:center;gap:4px;
+}
+.info-tag-blue{background:#eff6ff;color:#1d4ed8;border:1px solid #bfdbfe}
+.info-tag-green{background:#f0fdf4;color:#15803d;border:1px solid #bbf7d0}
+
+.info-cards-grid{
+  display:grid;grid-template-columns:repeat(2, 1fr);gap:12px;margin-bottom:16px;
+}
+@media(max-width:540px){.info-cards-grid{grid-template-columns:1fr}}
+
+.info-card-item{
+  background:#f8fafc;border:1px solid #e2e8f0;border-radius:12px;
+  padding:12px 14px;display:flex;align-items:flex-start;gap:12px;
+  transition:all .18s ease;
+}
+.info-card-item:hover{
+  background:#fff;border-color:#cbd5e1;box-shadow:0 4px 12px rgba(0,0,0,.04);
+}
+.info-item-icon{
+  width:36px;height:36px;border-radius:10px;
+  display:flex;align-items:center;justify-content:center;flex-shrink:0;
+}
+.info-item-label{
+  font-size:.67rem;font-weight:700;color:#64748b;text-transform:uppercase;
+  letter-spacing:.05em;margin-bottom:2px;
+}
+.info-item-val{
+  font-size:.85rem;font-weight:700;color:#0f172a;line-height:1.35;
+}
+
+.info-contact-box{
+  background:linear-gradient(135deg,rgba(37,99,235,.04),rgba(59,130,246,.08));
+  border:1px solid rgba(37,99,235,.22);border-radius:14px;
+  padding:14px 16px;display:flex;align-items:center;justify-content:space-between;
+  flex-wrap:wrap;gap:12px;margin-bottom:18px;
+}
+.info-contact-left{display:flex;align-items:center;gap:12px}
+.info-contact-avatar{
+  width:42px;height:42px;border-radius:50%;
+  background:linear-gradient(135deg,#2563eb,#1d4ed8);color:#fff;
+  display:flex;align-items:center;justify-content:center;
+  font-weight:800;font-size:.9rem;box-shadow:0 4px 10px rgba(37,99,235,.25);
+}
+.info-wa-btn{
+  display:inline-flex;align-items:center;gap:8px;
+  background:#25d366;color:#fff;font-weight:700;font-size:.8rem;
+  padding:8px 16px;border-radius:30px;text-decoration:none;
+  box-shadow:0 4px 12px rgba(37,211,102,.3);transition:all .16s ease;
+}
+.info-wa-btn:hover{
+  background:#1eb954;transform:translateY(-1px);
+  box-shadow:0 6px 16px rgba(37,211,102,.4);color:#fff;
+}
+.mf{display:flex;justify-content:flex-end;gap:8px;margin-top:18px}
+.fr{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+@media(max-width:480px){.fr{grid-template-columns:1fr}}
+.fg{margin-bottom:12px}
+.fg label{display:block;font-size:.7rem;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.04em;margin-bottom:4px}
+.fg input,.fg select,.fg textarea{
+  width:100%;padding:9px 11px;border:1.5px solid var(--b1);border-radius:7px;
+  font-size:.84rem;outline:none;transition:border .16s;background:#fafbff;
+  color:var(--ink);font-family:inherit;
+}
+.fg input:focus,.fg select:focus,.fg textarea:focus{border-color:var(--blue);background:#fff}
+
+/* Admin login modal */
+.adm-modal{
+  position:fixed;inset:0;background:rgba(0,0,0,.65);
+  z-index:300;display:flex;align-items:center;justify-content:center;
+  padding:20px;backdrop-filter:blur(5px);
+}
+.adm-box{
+  background:#0f172a;border:1px solid rgba(255,255,255,.1);
+  border-radius:var(--r2);padding:28px;width:100%;max-width:360px;color:#fff;
+}
+.adm-box h3{font-size:1.05rem;font-weight:700;margin-bottom:4px}
+.adm-box p{font-size:.76rem;color:rgba(255,255,255,.5);margin-bottom:18px}
+.adm-in{
+  width:100%;padding:11px 12px;border-radius:8px;
+  background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);
+  color:#fff;font-size:.88rem;outline:none;margin-bottom:10px;
+}
+.adm-in:focus{border-color:#60a5fa}
+.btn-adm{
+  width:100%;padding:11px;border-radius:8px;
+  background:#2563eb;color:#fff;
+  font-size:.88rem;font-weight:700;border:none;cursor:pointer;margin-top:2px;
+}
+.btn-adm:hover{background:#1d4ed8}
+.adm-err{color:#fca5a5;font-size:.74rem;margin-top:7px;text-align:center}
+
+/* Toast */
+#toast{
+  position:fixed;bottom:20px;right:20px;z-index:999;
+  background:#0f172a;color:#fff;padding:10px 18px;border-radius:10px;
+  font-size:.82rem;font-weight:600;box-shadow:0 8px 24px rgba(0,0,0,.3);
+  transform:translateY(70px);opacity:0;transition:all .24s ease;
+  border:1px solid rgba(255,255,255,.1);display:flex;align-items:center;gap:7px;
+}
+#toast.on{transform:translateY(0);opacity:1}
+
+/* Leaderboard */
+.lboard{display:flex;flex-direction:column;gap:7px}
+.litem{
+  display:flex;align-items:center;gap:10px;padding:8px 10px;border-radius:8px;
+  background:#f8fafc;border:1px solid var(--b1);
+}
+.rank{
+  width:24px;height:24px;border-radius:50%;display:flex;align-items:center;
+  justify-content:center;font-size:.72rem;font-weight:800;flex-shrink:0;
+}
+.r1{background:#fef08a;color:#854d0e}
+.r2{background:#e2e8f0;color:#334155}
+.r3{background:#fed7aa;color:#9a3412}
+.rn2{background:var(--bg);color:var(--muted);font-weight:600}
+.lname{font-size:.8rem;font-weight:700;color:var(--ink)}
+.lkls{font-size:.66rem;color:var(--muted)}
+.lbar{height:4px;border-radius:99px;background:var(--b1);overflow:hidden;flex:1;max-width:70px}
+.lbar-fill{height:100%;border-radius:99px;background:#2563eb}
+.lpct{font-size:.8rem;font-weight:700;color:var(--blue)}
+
+/* Progress bars */
+.bw{margin-top:3px}
+.bl{font-size:.68rem;color:var(--muted);margin-bottom:2px;display:flex;justify-content:space-between}
+.bb{background:#e2e8f0;border-radius:99px;height:4.5px;overflow:hidden}
+.bf{height:100%;border-radius:99px;transition:width .5s}
+.bf-h{background:#16a34a}
+.bf-a{background:#dc2626}
+
+/* Admin Absensi Grid */
+.ab-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:10px;margin-top:12px}
+.ab-card{
+  background:var(--card);border:1px solid var(--b1);border-radius:var(--r);
+  padding:12px;display:flex;align-items:center;gap:10px;box-shadow:var(--sh);
+}
+.ab-card .av3{
+  width:36px;height:36px;border-radius:50%;
+  background:#2563eb;
+  display:flex;align-items:center;justify-content:center;
+  color:#fff;font-size:.74rem;font-weight:700;flex-shrink:0;
+}
+.ab-card .ainfo{flex:1;min-width:0}
+.ab-card .aname{font-size:.84rem;font-weight:700;color:var(--ink);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.ab-card .akls{font-size:.68rem;color:var(--muted);margin-top:1px}
+.status-pills{display:flex;gap:4px;margin-top:7px;flex-wrap:wrap}
+.spill{padding:3px 8px;border-radius:99px;font-size:.7rem;font-weight:600;cursor:pointer;border:1.5px solid transparent;transition:all .14s}
+.spill-h{border-color:#16a34a;color:#16a34a}.spill-h.on{background:#16a34a;color:#fff}
+.spill-i{border-color:#d97706;color:#d97706}.spill-i.on{background:#d97706;color:#fff}
+.spill-s{border-color:#2563eb;color:#2563eb}.spill-s.on{background:#2563eb;color:#fff}
+.spill-a{border-color:#dc2626;color:#dc2626}.spill-a.on{background:#dc2626;color:#fff}
+
+/* Profil modal */
+.profil-header{
+  background:#1e3a8a;border-radius:var(--r);
+  padding:18px;color:#fff;margin-bottom:14px;display:flex;align-items:center;gap:12px;
+}
+.profil-header .pav{
+  width:48px;height:48px;border-radius:12px;background:rgba(255,255,255,.15);
+  display:flex;align-items:center;justify-content:center;font-size:1.15rem;font-weight:800;flex-shrink:0;
+}
+.profil-header .pn{font-size:1rem;font-weight:700}
+.profil-header .pm{font-size:.74rem;opacity:.7;margin-top:2px}
+.profil-stat-row{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-bottom:14px}
+.pstat{background:#f8fafc;border:1px solid var(--b1);border-radius:8px;padding:8px;text-align:center}
+.pstat .pv{font-size:1.15rem;font-weight:800}
+.pstat .pl{font-size:.65rem;color:var(--muted);text-transform:uppercase;font-weight:700}
+.sesi-edit-row{
+  display:flex;align-items:center;justify-content:space-between;
+  padding:8px 0;border-bottom:1px solid var(--b1);font-size:.78rem;gap:8px;
+}
+.sesi-edit-row .sn2{font-weight:700;color:var(--ink)}
+.sesi-edit-row .sd2{font-size:.68rem;color:var(--muted);margin-top:1px}
+
+/* Info Box */
+.info-box{
+  background:#eff6ff;border:1px solid #bfdbfe;color:#1e40af;
+  border-radius:var(--r);padding:11px 14px;font-size:.76rem;line-height:1.55;margin-bottom:14px;
+}
+
+@media print{
+  .topbar,.sidebar,.btn,.sh .btn{display:none!important}
+  .layout{display:block}.content{padding:0}
+  .card{box-shadow:none;border:1px solid #ccc}
+}
+</style>
+</head>
+<body>
+
+<!-- ════════ LANDING PAGE ════════ -->
+<div id="landingPage">
+  <div class="land-grid"></div>
+
+  <!-- NAVIGATION -->
+  <nav class="land-nav">
+    <div class="land-logo" id="logoTap" title="Ketuk 5x untuk akses Admin Pembina">
+      <div class="logo-wrap">
+        <img src="logo.jpg" alt="Logo NineteenTech" class="brand-logo-img"/>
+      </div>
+      <div>
+        <h1>NineteenTech</h1>
+        <span>Eskul Robotik · MAN 19 Jakarta</span>
+      </div>
+    </div>
+    <div class="nav-actions">
+      <button class="btn-nav-info" onclick="showInfo()">ℹ️ Info Eskul</button>
+      <button class="btn-absen-pill" onclick="showAbsenPage()">Presensi Siswa</button>
+    </div>
+  </nav>
+
+  <!-- HERO SECTION -->
+  <div class="land-hero">
+    <!-- Clean Logo Emblem -->
+    <div class="hero-crest-container" id="heroLogoTap" title="Ketuk 5x untuk akses Admin Pembina">
+      <img src="logo.jpg" alt="NineteenTech Official Crest" class="hero-crest-img"/>
+    </div>
+
+    <div class="chip">
+      <span class="chip-dot"></span>
+      <span>Ekstrakurikuler MAN 19 Jakarta Selatan · T.A. 2026/2027</span>
+    </div>
+
+    <h1>NineteenTech<br><span class="grad-brand">Robotic Club</span></h1>
+    <p>Presensi kehadiran latihan rutin, rekapitulasi, dan informasi kegiatan eskul robotik MAN 19 Jakarta Selatan.</p>
+
+    <div class="hero-btns">
+      <button class="btn-main" onclick="showAbsenPage()">📱 Presensi Siswa</button>
+      <button class="btn-sec" onclick="showInfo()">ℹ️ Informasi Ekskul</button>
+    </div>
+  </div>
+
+  <!-- 3 INFO CARDS -->
+  <div class="pillars-grid">
+    <div class="pillar-card">
+      <div class="pillar-icon">📅</div>
+      <div class="pillar-title">Latihan Mingguan</div>
+      <div class="pillar-desc">Dilaksanakan rutin setiap hari Senin sore pukul 15:30 – 17:00 WIB di Lab Komputer Lt. 2.</div>
+    </div>
+    <div class="pillar-card">
+      <div class="pillar-icon">🤖</div>
+      <div class="pillar-title">Materi Robotika</div>
+      <div class="pillar-desc">Mempelajari perakitan Line Follower, rangkaian mikrokontroler Arduino, dan pemrograman logika robot.</div>
+    </div>
+    <div class="pillar-card">
+      <div class="pillar-icon">🎯</div>
+      <div class="pillar-title">Target Prestasi</div>
+      <div class="pillar-desc">Fokus berlatih, bereksperimen, dan mengasah keterampilan untuk meraih prestasi di perlombaan.</div>
+    </div>
+  </div>
+
+  <!-- STATS DOCK -->
+  <div class="land-stats">
+    <div class="lstat">
+      <div class="lv" id="lsSesi">—</div>
+      <div class="ll">Pertemuan Terlaksana</div>
+    </div>
+    <div class="lstat">
+      <div class="lv" id="lsStatus">—</div>
+      <div class="ll">Status Sesi Hari Ini</div>
+    </div>
+    <div class="lstat">
+      <div class="lv" id="lsNext">—</div>
+      <div class="ll">Jadwal Mendatang</div>
+    </div>
+    <div class="lstat">
+      <a href="https://wa.me/6285709828152" target="_blank">
+        <div class="lv">Arfa</div>
+        <div class="ll">📱 WhatsApp Ketua Eskul</div>
+      </a>
+    </div>
+  </div>
+
+  <div class="land-foot">
+    © 2026 NineteenTech Robotic Club · MAN 19 Jakarta Selatan · Lab Komputer Lt. 2 · <a href="javascript:void(0)" onclick="openAdmModal()" style="color:rgba(255,255,255,.45);text-decoration:none;margin-left:6px" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='rgba(255,255,255,.45)'">🔐 Akses Pembina</a>
+  </div>
+</div>
+
+<!-- ════════ ABSEN PAGE (SISWA) ════════ -->
+<div id="absenPage" class="hidden">
+  <nav class="absen-nav">
+    <div class="absen-brand">
+      <div class="lw">
+        <img src="logo.jpg" alt="Logo" class="brand-logo-img"/>
+      </div>
+      <div>
+        <h2>NineteenTech</h2>
+        <span>MAN 19 Jakarta Selatan</span>
+      </div>
+    </div>
+    <button class="btn-back" onclick="backToLanding()">← Beranda</button>
+  </nav>
+
+  <div class="absen-body">
+    <div class="absen-inner" id="absenInner"></div>
+  </div>
+</div>
+
+<!-- ════════ ADMIN APP ════════ -->
+<div id="appPage" class="hidden">
+  <div class="topbar">
+    <div class="tb-brand">
+      <div class="lw2">
+        <img src="logo.jpg" alt="Logo" class="brand-logo-img"/>
+      </div>
+      <div>
+        <h2>NineteenTech</h2>
+        <span>MAN 19 Jakarta Selatan · Administrator</span>
+      </div>
+    </div>
+    <div class="tb-right">
+      <span id="cloudStatusBadge" style="background:#f1f5f9;color:#64748b;font-size:.72rem;padding:4px 10px;border-radius:20px;display:inline-flex;align-items:center;gap:5px;font-weight:600;margin-right:6px" title="Status koneksi database">☁️ Mode Lokal</span>
+      <div class="tb-user">
+        <strong id="tbName">Pembina</strong>
+        <span>Administrator Eskul</span>
+      </div>
+      <div class="av-adm" id="tbAv">A</div>
+      <button class="btn-lo" onclick="doLogout()">Keluar</button>
+    </div>
+  </div>
+
+  <div class="layout">
+    <aside class="sidebar">
+      <div class="sb-profile">
+        <div class="avb">
+          <img src="logo.jpg" alt="Logo" style="width:100%;height:100%;object-fit:cover;border-radius:50%"/>
+        </div>
+        <div>
+          <div class="sbn2" id="sbName">Pembina Admin</div>
+          <div class="sbr">Administrator Eskul</div>
+        </div>
+      </div>
+      <ul class="sbnav" id="sbnav"></ul>
+    </aside>
+    <main class="content" id="mc"></main>
+  </div>
+</div>
+
+<!-- Admin login modal (tersembunyi) -->
+<div class="adm-modal hidden" id="admModal">
+  <div class="adm-box">
+    <div style="display:flex;align-items:center;gap:12px;margin-bottom:14px">
+      <div style="width:38px;height:38px;border-radius:50%;background:#fff;padding:2px;overflow:hidden;flex-shrink:0">
+        <img src="logo.jpg" alt="Logo" style="width:100%;height:100%;object-fit:cover;border-radius:50%"/>
+      </div>
+      <div>
+        <h3>Akses Pembina</h3>
+        <p style="margin:0;font-size:.72rem">NineteenTech Admin</p>
+      </div>
+    </div>
+    <p>Masukkan username dan password admin untuk membuka dashboard:</p>
+    <input class="adm-in" type="text" id="adUser" placeholder="Username (default: admin)" onkeydown="if(event.key==='Enter')doLoginAdmin()"/>
+    <input class="adm-in" type="password" id="adPass" placeholder="Password (default: admin123)" onkeydown="if(event.key==='Enter')doLoginAdmin()"/>
+    <button class="btn-adm" onclick="doLoginAdmin()">Masuk ke Dashboard</button>
+    <p class="adm-err hidden" id="adErr">Username atau password salah!</p>
+    <p style="text-align:center;margin-top:14px">
+      <button onclick="closeAdmModal()" style="background:none;border:none;color:rgba(255,255,255,.35);font-size:.75rem;cursor:pointer">Batal</button>
+    </p>
+  </div>
+</div>
+
+<div id="toast"></div>
+<div id="mc2"></div>
+
+<!-- Google Firebase SDK (Compat) & Config -->
+<script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-database-compat.js"></script>
+<script src="firebase-config.js"></script>
+
+<script>
+/* ════════════════════════════════
+   DATABASE & INITIALIZATION
+════════════════════════════════ */
+const KEY='rbk_man19_v4';
+function loadDB(){
+  const r=localStorage.getItem(KEY);
+  if(r)return JSON.parse(r);
+  const db={
+    anggota:[
+      {id:1, nis:'001',nama:'Evan Fadhilah Putra',            kelas:'X-A', angkatan:'2026',status:'aktif'},
+      {id:2, nis:'002',nama:'Muhammad Kautsar',                kelas:'X-A', angkatan:'2026',status:'aktif'},
+      {id:3, nis:'003',nama:'Muhammad Arkan Raziq',            kelas:'X-B', angkatan:'2026',status:'aktif'},
+      {id:4, nis:'004',nama:'Delano Khulafa Bumi',             kelas:'X-D', angkatan:'2026',status:'aktif'},
+      {id:5, nis:'005',nama:'Hessyel Raffasya Putra',          kelas:'X-D', angkatan:'2026',status:'aktif'},
+      {id:6, nis:'006',nama:'Saibi Jalalludin Rumi',           kelas:'X-E', angkatan:'2026',status:'aktif'},
+      {id:7, nis:'007',nama:'Azzahra Haura Idris',             kelas:'X-F', angkatan:'2026',status:'aktif'},
+      {id:8, nis:'008',nama:'Azzam Ibadurrahman',              kelas:'X-F', angkatan:'2026',status:'aktif'},
+      {id:9, nis:'009',nama:'Muhammad Abiy Thaariq',           kelas:'X-F', angkatan:'2026',status:'aktif'},
+      {id:10,nis:'010',nama:'Afkah Dwi Putra',                 kelas:'X-G', angkatan:'2026',status:'aktif'},
+      {id:11,nis:'011',nama:'Intan Khairunisa',                kelas:'X-G', angkatan:'2026',status:'aktif'},
+      {id:12,nis:'012',nama:'Najwah Zulaika Kholid',           kelas:'X-G', angkatan:'2026',status:'aktif'},
+      {id:13,nis:'013',nama:'Zahwan Muhti Pahlevi',            kelas:'X-G', angkatan:'2026',status:'aktif'},
+      {id:14,nis:'014',nama:'M Zidan Gunawan',                 kelas:'X-H', angkatan:'2026',status:'aktif'},
+      {id:15,nis:'015',nama:'Muhammad Abiyu Khiar Esa Arganta',kelas:'X-H', angkatan:'2026',status:'aktif'},
+      {id:16,nis:'016',nama:'Adli Darvesh Sandireja',          kelas:'XI-A',angkatan:'2025',status:'aktif'},
+      {id:17,nis:'017',nama:'Dafa Arkan Alqifari',             kelas:'XI-A',angkatan:'2025',status:'aktif'},
+      {id:18,nis:'018',nama:'Hafizh Shooziki Naazmi',          kelas:'XI-A',angkatan:'2025',status:'aktif'},
+      {id:19,nis:'019',nama:'Keyla Ramadhani Wibowo',          kelas:'XI-A',angkatan:'2025',status:'aktif'},
+      {id:20,nis:'020',nama:'Naura Innayah Akbar',             kelas:'XI-A',angkatan:'2025',status:'aktif'},
+      {id:21,nis:'021',nama:'Arfa Safaraz Azis',               kelas:'XI-B',angkatan:'2025',status:'aktif'},
+      {id:22,nis:'022',nama:'Azril Bintang Jaufa Lail',        kelas:'XI-B',angkatan:'2025',status:'aktif'},
+      {id:23,nis:'023',nama:'Divana Tiara Hasya',              kelas:'XI-B',angkatan:'2025',status:'aktif'},
+      {id:24,nis:'024',nama:'Tsabita Soraya',                  kelas:'XI-B',angkatan:'2025',status:'aktif'},
+      {id:25,nis:'025',nama:'Dinda Raisah Gunawan',            kelas:'XI-C',angkatan:'2025',status:'aktif'},
+      {id:26,nis:'026',nama:'Raisya Aghniya Rizqi',            kelas:'XI-C',angkatan:'2025',status:'aktif'},
+      {id:27,nis:'027',nama:'Rizki Imam Addahiri',             kelas:'XI-C',angkatan:'2025',status:'aktif'},
+      {id:28,nis:'028',nama:'Sekar Salsabila Afifah',          kelas:'XI-C',angkatan:'2025',status:'aktif'},
+      {id:29,nis:'029',nama:'Ghilman Hadzami',                 kelas:'XI-D',angkatan:'2025',status:'aktif'},
+      {id:30,nis:'030',nama:'Aliyah Azka Aprilia',             kelas:'XI-E',angkatan:'2025',status:'aktif'},
+      {id:31,nis:'031',nama:'Alya Rahma Atqiya',               kelas:'XI-E',angkatan:'2025',status:'aktif'},
+      {id:32,nis:'032',nama:'Dinda Brillianca Syahnaz Putri',  kelas:'XI-F',angkatan:'2025',status:'aktif'},
+      {id:33,nis:'033',nama:'Muhammad Arziki Abqory',          kelas:'XI-F',angkatan:'2025',status:'aktif'},
+      {id:34,nis:'034',nama:'Fathan Kamil',                    kelas:'XI-G',angkatan:'2025',status:'aktif'},
+      {id:35,nis:'035',nama:'Sultan Aydin Zahran',             kelas:'XI-G',angkatan:'2025',status:'aktif'},
+      {id:36,nis:'036',nama:'Zidane',                          kelas:'XI-H',angkatan:'2025',status:'aktif'},
+    ],
+    sesi:[
+      {id:1,tanggal:'2026-10-19',pertemuan:'Pertemuan 1',materi:'Pengenalan Robotik & Komponen Dasar',kode:'RBK-FQRC',kodeAktif:false},
+      {id:2,tanggal:'2026-10-26',pertemuan:'Pertemuan 2',materi:'Pemrograman Arduino & Sensor',kode:'RBK-N7D9',kodeAktif:false},
+      {id:3,tanggal:'2026-11-02',pertemuan:'Pertemuan 3',materi:'Line Follower – Assembling & Testing',kode:'RBK-BYGV',kodeAktif:false},
+    ],
+    absensi:(()=>{
+      const mk=(ids,n)=>{const r={};for(let i=1;i<=n;i++)r[i]='alpha';ids.forEach(x=>r[x]='hadir');return r};
+      return{
+        1:mk([23,20,7,32,16,35,31,25,2,26,30,12,19,29,22],36),
+        2:mk([7,6,12,36,9,35,18,2,29,1,5,11,13,19,8,20,3,22,10,16],36),
+        3:mk([18,36,11,22,20,12,31,8,26,35,3,29,5,7,13,6,2,23,1,17,19],36),
+      };
+    })(),
+    checkinLog:{
+      1:[23,20,7,32,16,35,31,25,2,26,30,12,19,29,22],
+      2:[7,6,12,36,9,35,18,2,29,1,5,11,13,19,8,20,3,22,10,16],
+      3:[18,36,11,22,20,12,31,8,26,35,3,29,5,7,13,6,2,23,1,17,19],
+    },
+    deviceLock:{},
+    pengumuman:[
+      {id:1,judul:'Latihan Rutin Mingguan',isi:'Latihan rutin dilaksanakan setiap Senin sore di Lab Komputer Lt. 2. Hadir tepat waktu ya!',prioritas:'info',tanggal:'2026-11-07'},
+      {id:2,judul:'Fokus Latihan & Target Prestasi',isi:'Persiapkan diri dan materi latihan secara konsisten untuk meraih prestasi bersama NineteenTech.',prioritas:'warn',tanggal:'2026-11-05'},
+    ],
+    jadwal:[
+      {id:1,tanggal:'2026-11-09',topik:'Pertemuan 4 – PID Controller',waktu:'15:30–17:00',lokasi:'Lab Komputer Lt.2'},
+      {id:2,tanggal:'2026-11-16',topik:'Pertemuan 5 – Uji Coba Lintasan',waktu:'15:30–17:00',lokasi:'Lab Komputer Lt.2'},
+      {id:3,tanggal:'2026-11-23',topik:'Pertemuan 6 – Evaluasi & Penilaian',waktu:'15:30–17:00',lokasi:'Lab Komputer Lt.2'},
+    ],
+    nextId:{anggota:37,sesi:4,pengumuman:3,jadwal:4},
+    adminPass:'admin123'
+  };
+  saveDB(db);return db;
+}
+
+let fbDB = null;
+let fbRef = null;
+let fbConnected = false;
+
+function getFBConfig(){
+  const saved = localStorage.getItem('rbk_firebase_custom_cfg');
+  if(saved){
+    try {
+      const parsed = JSON.parse(saved);
+      if(parsed && parsed.apiKey && !parsed.apiKey.includes('PASTE_')) return parsed;
+    } catch(e){}
+  }
+  if(window.FIREBASE_CONFIG && window.FIREBASE_CONFIG.apiKey && !window.FIREBASE_CONFIG.apiKey.includes('PASTE_')){
+    return window.FIREBASE_CONFIG;
+  }
+  return null;
+}
+
+function updateCloudBadge(){
+  const b = document.getElementById('cloudStatusBadge');
+  if(!b) return;
+  if(fbConnected){
+    b.style.background = '#dcfce7';
+    b.style.color = '#15803d';
+    b.innerHTML = '🟢 Cloud Online';
+    b.title = 'Terhubung ke Google Firebase Realtime Database';
+  } else {
+    b.style.background = '#f1f5f9';
+    b.style.color = '#64748b';
+    b.innerHTML = '☁️ Mode Lokal';
+    b.title = 'Tersimpan lokal di browser/laptop';
+  }
+}
+
+function refreshActiveView(){
+  if(document.getElementById('nl-dashboard')?.classList.contains('on')) nav('dashboard');
+  else if(document.getElementById('nl-sesi')?.classList.contains('on')) nav('sesi');
+  else if(document.getElementById('nl-rekap')?.classList.contains('on')) nav('rekap');
+  else if(document.getElementById('nl-anggota')?.classList.contains('on')) nav('anggota');
+  else if(document.getElementById('nl-pengaturan')?.classList.contains('on')) nav('pengaturan');
+  else if(!document.getElementById('landingPage').classList.contains('hidden')) updateLandingStats();
+  else if(!document.getElementById('absenPage').classList.contains('hidden') && absenStep === 3) renderStep();
+}
+
+function initFirebase(){
+  const cfg = getFBConfig();
+  if(!cfg || !cfg.apiKey || cfg.apiKey.includes('PASTE_')){
+    fbConnected = false;
+    updateCloudBadge();
+    return;
+  }
+  try {
+    if(typeof firebase === 'undefined') return;
+    if(!firebase.apps.length){
+      firebase.initializeApp(cfg);
+    }
+    fbDB = firebase.database();
+    fbRef = fbDB.ref('absensi_robotik_db');
+
+    fbRef.on('value', snap => {
+      fbConnected = true;
+      updateCloudBadge();
+      const val = snap.val();
+      if(val && typeof val === 'object' && Array.isArray(val.anggota)){
+        const curStr = JSON.stringify(DB);
+        const fbStr = JSON.stringify(val);
+        if(curStr !== fbStr){
+          DB = val;
+          localStorage.setItem(KEY, fbStr);
+          refreshActiveView();
+        }
+      } else if(!val && DB){
+        // Inisialisasi awal ke Firebase jika masih kosong
+        fbRef.set(DB);
+      }
+    }, err => {
+      console.warn('Firebase error:', err);
+      fbConnected = false;
+      updateCloudBadge();
+    });
+  } catch(e) {
+    console.warn('Firebase init error:', e);
+    fbConnected = false;
+    updateCloudBadge();
+  }
+}
+
+function saveDB(d){
+  localStorage.setItem(KEY,JSON.stringify(d));
+  // 1. Simpan ke Firebase Realtime Cloud jika terhubung
+  if(fbRef){
+    try { fbRef.set(d); } catch(e){ console.warn("Firebase save error:", e); }
+  }
+  // 2. Simpan ke backend server.js lokal jika aktif
+  try {
+    fetch('/api/db', {
+      method: 'POST',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify(d)
+    }).catch(()=>{});
+  } catch(e){}
+}
+
+function syncFromServer(){
+  if(fbConnected) return; // Jika Firebase terhubung, listener realtime yang aktif
+  fetch('/api/db')
+    .then(r => r.ok ? r.json() : null)
+    .then(serverData => {
+      if(serverData && typeof serverData === 'object' && serverData.anggota){
+        const curStr = JSON.stringify(DB);
+        const srvStr = JSON.stringify(serverData);
+        if(curStr !== srvStr){
+          DB = serverData;
+          localStorage.setItem(KEY, srvStr);
+          refreshActiveView();
+        }
+      } else if(serverData === null && DB) {
+        saveDB(DB);
+      }
+    })
+    .catch(()=>{});
+}
+
+let DB=loadDB(),CU=null;
+
+// Inisialisasi Firebase & Sync Lokal
+initFirebase();
+syncFromServer();
+setInterval(syncFromServer, 4000);
+
+/* ── GEOFENCE CHECK (MAN 19 Jakarta Selatan) ── */
+const GEO={lat:-6.227994,lng:106.747369,radius:150};
+function haversine(lat1,lon1,lat2,lon2){
+  const R=6371000;
+  const dLat=(lat2-lat1)*Math.PI/180;
+  const dLon=(lon2-lon1)*Math.PI/180;
+  const a=Math.sin(dLat/2)**2+Math.cos(lat1*Math.PI/180)*Math.cos(lat2*Math.PI/180)*Math.sin(dLon/2)**2;
+  return R*2*Math.atan2(Math.sqrt(a),Math.sqrt(1-a));
+}
+function checkGeo(){
+  return new Promise(resolve=>{
+    if(!navigator.geolocation){resolve(null);return}
+    navigator.geolocation.getCurrentPosition(
+      pos=>{
+        const d=haversine(pos.coords.latitude,pos.coords.longitude,GEO.lat,GEO.lng);
+        resolve(d<=GEO.radius);
+      },
+      ()=>resolve(null),
+      {timeout:6000,maximumAge:30000,enableHighAccuracy:true}
+    );
+  });
+}
+
+/* ── DEVICE ID (1 HP 1 Siswa) ── */
+const DEV_KEY='rbk_dev_id';
+function getDevId(){
+  let id=localStorage.getItem(DEV_KEY);
+  if(!id){
+    const c='ABCDEFGHJKLMNPQRSTUVWXYZabcdefghjkmnpqrstuvwxyz23456789';
+    id='DEV_'+Array.from({length:16},()=>c[Math.floor(Math.random()*c.length)]).join('');
+    localStorage.setItem(DEV_KEY,id);
+  }
+  return id;
+}
+const MY_DEV=getDevId();
+
+/* ── UTILS ── */
+const inits=n=>n.split(' ').slice(0,2).map(w=>w[0]).join('').toUpperCase();
+function fmtD(d){if(!d)return'-';const[y,m,dd]=d.split('-');return`${dd} ${['Jan','Feb','Mar','Apr','Mei','Jun','Jul','Agu','Sep','Okt','Nov','Des'][+m-1]} ${y}`}
+function fmtShort(d){if(!d)return'-';const[,m,dd]=d.split('-');return`${dd} ${['Jan','Feb','Mar','Apr','Mei','Jun','Jul','Agu','Sep','Okt','Nov','Des'][+m-1]}`}
+function toast(msg,dur=2600){
+  const t=document.getElementById('toast');
+  t.innerHTML=`<span>⚡</span> <span>${msg}</span>`;
+  t.classList.add('on');
+  setTimeout(()=>t.classList.remove('on'),dur);
+}
+function closeModal(){document.getElementById('mc2').innerHTML=''}
+function closeOut(e){if(e.target.classList.contains('mbk'))closeModal()}
+function genKode(){
+  const c='ABCDEFGHJKLMNPQRSTUVWXYZ23456789';
+  return'RBK-'+Array.from({length:4},()=>c[Math.floor(Math.random()*c.length)]).join('');
+}
+function stts(aid){
+  let h=0,i=0,s=0,a=0;
+  DB.sesi.forEach(ses=>{
+    const v=(DB.absensi[ses.id]||{})[aid]||'alpha';
+    if(v==='hadir')h++;else if(v==='izin')i++;else if(v==='sakit')s++;else a++;
+  });
+  return{h,i,s,a,total:DB.sesi.length};
+}
+
+/* ── AUDIO FEEDBACK (WEB AUDIO API) ── */
+function playSuccessSound(){
+  try {
+    const ctx = new (window.AudioContext || window.webkitAudioContext)();
+    const notes = [523.25, 659.25, 783.99, 1046.50];
+    notes.forEach((freq, idx) => {
+      const osc = ctx.createOscillator();
+      const gain = ctx.createGain();
+      osc.type = 'sine';
+      osc.frequency.setValueAtTime(freq, ctx.currentTime + idx * 0.08);
+      gain.gain.setValueAtTime(0.12, ctx.currentTime + idx * 0.08);
+      gain.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + idx * 0.08 + 0.35);
+      osc.connect(gain);
+      gain.connect(ctx.destination);
+      osc.start(ctx.currentTime + idx * 0.08);
+      osc.stop(ctx.currentTime + idx * 0.08 + 0.4);
+    });
+  } catch(e) {}
+}
+
+/* ── CANVAS CONFETTI EFFECT ── */
+function runConfetti(){
+  const canvas = document.createElement('canvas');
+  canvas.id = 'confettiCanvas';
+  canvas.style.position = 'fixed';
+  canvas.style.top = '0';
+  canvas.style.left = '0';
+  canvas.style.width = '100vw';
+  canvas.style.height = '100vh';
+  canvas.style.pointerEvents = 'none';
+  canvas.style.zIndex = '9999';
+  document.body.appendChild(canvas);
+
+  const ctx = canvas.getContext('2d');
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+
+  const count = 70;
+  const particles = [];
+  const colors = ['#38bdf8', '#3b82f6', '#4ade80', '#fbbf24', '#f43f5e', '#a855f7'];
+
+  for(let i=0; i<count; i++){
+    particles.push({
+      x: canvas.width / 2,
+      y: canvas.height * 0.4,
+      r: Math.random() * 5 + 3,
+      dx: (Math.random() - 0.5) * 14,
+      dy: (Math.random() - 0.7) * 16,
+      color: colors[Math.floor(Math.random() * colors.length)],
+      opacity: 1
+    });
+  }
+
+  let frames = 0;
+  function animate(){
+    frames++;
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    particles.forEach(p => {
+      p.x += p.dx;
+      p.y += p.dy;
+      p.dy += 0.35;
+      p.dx *= 0.98;
+      p.opacity -= 0.009;
+
+      ctx.save();
+      ctx.globalAlpha = Math.max(0, p.opacity);
+      ctx.fillStyle = p.color;
+      ctx.beginPath();
+      ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+      ctx.fill();
+      ctx.restore();
+    });
+
+    if(frames < 140 && particles.some(p => p.opacity > 0)){
+      requestAnimationFrame(animate);
+    } else {
+      canvas.remove();
+    }
+  }
+  requestAnimationFrame(animate);
+}
+
+/* ── SECRET ADMIN TRIGGER (5 TAPS ON LOGO) ── */
+let tapCount=0,tapTimer=null;
+function handleLogoTap(){
+  tapCount++;
+  clearTimeout(tapTimer);
+  if(tapCount>=5){tapCount=0;openAdmModal()}
+  else tapTimer=setTimeout(()=>tapCount=0,1600);
+}
+document.getElementById('logoTap')?.addEventListener('click', handleLogoTap);
+document.getElementById('heroLogoTap')?.addEventListener('click', handleLogoTap);
+
+// Akses cepat Admin via URL hash (#admin atau ?admin)
+if(window.location.hash==='#admin'||window.location.search.includes('admin')){
+  setTimeout(openAdmModal, 300);
+}
+window.addEventListener('hashchange', ()=>{
+  if(window.location.hash==='#admin') openAdmModal();
+});
+// Shortcut keyboard Alt + A untuk Pembina
+window.addEventListener('keydown', e => {
+  if(e.altKey && (e.key === 'a' || e.key === 'A')) {
+    e.preventDefault();
+    openAdmModal();
+  }
+});
+
+function updateLandingStats(){
+  DB=loadDB();
+  const sa=DB.sesi.find(s=>s.kodeAktif);
+  const today=new Date().toISOString().slice(0,10);
+  const nextJ=DB.jadwal.filter(j=>j.tanggal>=today).sort((a,b)=>a.tanggal.localeCompare(b.tanggal))[0];
+  document.getElementById('lsSesi').textContent=DB.sesi.length;
+  document.getElementById('lsStatus').innerHTML=sa?'<span style="color:#4ade80">🟢 Buka</span>':'<span style="color:rgba(255,255,255,.5)">⚪ Tutup</span>';
+  document.getElementById('lsNext').textContent=nextJ?fmtShort(nextJ.tanggal):'–';
+}
+updateLandingStats();
+
+function showInfo(){
+  document.getElementById('mc2').innerHTML=`
+  <div class="mbk" onclick="closeOut(event)"><div class="modal">
+    <div style="display:flex;align-items:center;gap:14px;margin-bottom:16px">
+      <div style="width:46px;height:46px;border-radius:50%;background:#fff;padding:2px;box-shadow:0 0 0 2px rgba(37,99,235,.4);overflow:hidden;flex-shrink:0">
+        <img src="logo.jpg" alt="Logo" style="width:100%;height:100%;object-fit:cover;border-radius:50%"/>
+      </div>
+      <div>
+        <h3 style="margin:0;font-size:1.05rem">NineteenTech Robotic Club</h3>
+        <span style="font-size:.74rem;color:var(--muted)">MAN 19 Jakarta Selatan</span>
+      </div>
+    </div>
+    <div style="font-size:.84rem;color:var(--ink2);line-height:1.8">
+      <p><strong>🏫 Sekolah:</strong> MAN 19 Jakarta Selatan</p>
+      <p><strong>📍 Lokasi Latihan:</strong> Lab Komputer Lt. 2</p>
+      <p><strong>📅 Jadwal:</strong> Setiap Senin, 15:30 – 17:00 WIB</p>
+      <p><strong>📆 Tahun Ajaran:</strong> 2026 / 2027</p>
+      <p><strong>🎯 Target:</strong> Meraih Prestasi</p>
+      <p><strong>🤖 Materi Fokus:</strong> Line Follower, Arduino, dan Pemrograman Robot</p>
+      <p><strong>📱 Ketua Eskul / CP:</strong> Arfa Safaraz Azis — <a href="https://wa.me/6285709828152" target="_blank" style="color:var(--blue);font-weight:700">+62 857-0982-8152</a></p>
+    </div>
+    <div class="mf"><button class="btn btn-p" onclick="closeModal()">Tutup</button></div>
+  </div></div>`;
+}
+
+/* ════════════════════════════════
+   ABSEN PAGE (STUDENT FLOW)
+════════════════════════════════ */
+let selKelas=null,selAnggota=null,absenStep=1;
+function showAbsenPage(){
+  DB=loadDB();selKelas=null;selAnggota=null;absenStep=1;
+  document.getElementById('landingPage').classList.add('hidden');
+  document.getElementById('absenPage').classList.remove('hidden');
+  renderStep();
+}
+function backToLanding(){
+  document.getElementById('absenPage').classList.add('hidden');
+  document.getElementById('landingPage').classList.remove('hidden');
+  updateLandingStats();
+}
+
+function renderStep(){
+  const sa=DB.sesi.find(s=>s.kodeAktif);
+  const stepsHtml=`<div class="steps">
+    <div class="step ${absenStep>=1?'active':''} ${absenStep>1?'done':''}"><div class="sn">${absenStep>1?'✓':'1'}</div><span>Kelas</span></div>
+    <div class="step-line"></div>
+    <div class="step ${absenStep>=2?'active':''} ${absenStep>2?'done':''}"><div class="sn">${absenStep>2?'✓':'2'}</div><span>Nama</span></div>
+    <div class="step-line"></div>
+    <div class="step ${absenStep>=3?'active':''}"><div class="sn">3</div><span>Hadir</span></div>
+  </div>`;
+
+  if(absenStep===1){
+    const kelas=[...new Set(DB.anggota.filter(a=>a.status==='aktif').map(a=>a.kelas))].sort();
+    document.getElementById('absenInner').innerHTML=stepsHtml+`
+    <div class="glass">
+      <p class="glabel">Langkah 1 — Pilih Kelas</p>
+      <h3>Kamu dari kelas apa?</h3>
+      <div class="kg" style="margin-top:12px">${kelas.map(k=>`<div class="kchip" onclick="pickKelas('${k}',this)">${k}</div>`).join('')}</div>
+    </div>`;
+  }
+  else if(absenStep===2){
+    const siswa=DB.anggota.filter(a=>a.kelas===selKelas&&a.status==='aktif');
+    document.getElementById('absenInner').innerHTML=stepsHtml+`
+    <div class="glass">
+      <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:6px">
+        <p class="glabel" style="margin:0">Langkah 2 — Kelas ${selKelas}</p>
+        <span style="font-size:.7rem;color:rgba(255,255,255,.45);font-weight:700">${siswa.length} Siswa</span>
+      </div>
+      <h3>Siapa kamu?</h3>
+      <div class="search-box" style="margin:10px 0 12px">
+        <input type="text" id="siswaSearchIn" placeholder="🔍 Cari nama kamu..." oninput="filterSiswaList(this.value)" autocomplete="off"/>
+      </div>
+      <div class="nlist" id="siswaNlist">${renderSiswaItems(siswa)}</div>
+    </div>
+    <button class="btn-back" style="margin-top:6px" onclick="absenStep=1;renderStep()">← Ganti Kelas</button>`;
+  }
+  else if(absenStep===3){
+    const a=DB.anggota.find(x=>x.id===selAnggota);
+    const st=stts(a.id);
+    const pct=st.total?Math.round(st.h/st.total*100):0;
+    const r=24,circ=2*Math.PI*r,dash=circ*(pct/100);
+    const pcol=pct>=75?'#4ade80':'#f87171';
+    const sudah=sa&&(DB.checkinLog[sa.id]||[]).includes(a.id);
+
+    const sesiInfoHtml=sa?`<div class="sesi-card">
+      <div class="sc-num">${sa.pertemuan} · ${fmtD(sa.tanggal)}</div>
+      <div class="sc-title">Sesi Latihan Sedang Buka</div>
+      <div class="sc-materi">${sa.materi}</div>
+    </div>`:'';
+
+    let ciSection='';
+    if(!sa){
+      ciSection=`<div class="ci-msg ci-warn" style="margin-top:0">⏳ Belum ada sesi yang dibuka. Tunggu pembina / ketua eskul membuka kode absensi!</div>`;
+    } else if(sudah){
+      ciSection=`<div class="ci-msg ci-ok" style="margin-top:0;padding:16px;font-size:.92rem">🎉 Kamu sudah tercatat <strong>HADIR</strong>!<br><span style="font-size:.76rem;opacity:.8">${sa.pertemuan} · ${fmtD(sa.tanggal)}</span></div>`;
+    } else {
+      ciSection=`
+        <p class="glabel" style="margin-bottom:8px">Masukkan Token dari Pembina / Ketua Eskul</p>
+        <input class="code-in" id="ciIn" maxlength="8" placeholder="RBK-XXXX"
+          oninput="this.value=this.value.toUpperCase()"
+          onkeydown="if(event.key==='Enter')doCI()"/>
+        <button class="btn-ci" onclick="doCI()">✅ Saya Hadir!</button>
+        <div id="ciMsg"></div>`;
+    }
+
+    const histRows=[...DB.sesi].reverse().map(ses=>{
+      const v=(DB.absensi[ses.id]||{})[a.id]||'alpha';
+      const em={hadir:'✅',izin:'📝',sakit:'🏥',alpha:'❌'};
+      const lb={hadir:'Hadir',izin:'Izin',sakit:'Sakit',alpha:'Alpha'};
+      return`<div class="hist-row">
+        <div><div class="hn">${ses.pertemuan}</div><div class="hd">${fmtD(ses.tanggal)}</div></div>
+        <span class="bs2 b${v==='sakit'?'sa':v[0]}">${em[v]} ${lb[v]}</span>
+      </div>`;
+    }).join('');
+
+    document.getElementById('absenInner').innerHTML=stepsHtml+`
+    <div class="prof-banner">
+      <div class="av">${inits(a.nama)}</div>
+      <div>
+        <div class="pn">${a.nama}</div>
+        <div class="pm">NIS ${a.nis} · Kelas ${a.kelas}</div>
+      </div>
+    </div>
+
+    ${sesiInfoHtml}
+
+    <div class="glass" style="margin-bottom:12px">
+      ${ciSection}
+    </div>
+
+    <div class="ring-row">
+      <div class="ring-card">
+        <div class="pct-ring">
+          <svg width="56" height="56" viewBox="0 0 58 58">
+            <circle cx="29" cy="29" r="${r}" fill="none" stroke="rgba(255,255,255,.1)" stroke-width="5.5"/>
+            <circle cx="29" cy="29" r="${r}" fill="none" stroke="${pcol}" stroke-width="5.5"
+              stroke-dasharray="${dash} ${circ}" stroke-linecap="round"/>
+          </svg>
+          <div class="rnum">${pct}%</div>
+        </div>
+        <div>
+          <div style="font-size:.7rem;color:rgba(255,255,255,.45);margin-bottom:4px;font-weight:700">Persentase Kehadiran</div>
+          <div class="mini-st">
+            <div class="mst"><div class="mv" style="color:#4ade80">${st.h}</div><div class="ml">Hadir</div></div>
+            <div class="mst"><div class="mv" style="color:#f87171">${st.a}</div><div class="ml">Alpha</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="glass">
+      <p class="glabel">Riwayat Presensi</p>
+      ${histRows||'<p style="color:rgba(255,255,255,.3);font-size:.8rem;text-align:center;padding:12px">Belum ada riwayat sesi</p>'}
+    </div>
+    <button class="btn-back" style="margin-top:8px" onclick="absenStep=2;renderStep()">← Ganti Nama</button>`;
+  }
+}
+
+function renderSiswaItems(list){
+  if(list.length===0){
+    return `<div style="text-align:center;padding:20px;color:rgba(255,255,255,.4);font-size:.82rem">Nama siswa tidak ditemukan</div>`;
+  }
+  return list.map(a=>`
+    <div class="nitem" id="ni-${a.id}" onclick="pickNama(${a.id},this)">
+      <div class="nitem-left">
+        <div class="nav2">${inits(a.nama)}</div>
+        <div>
+          <div class="nn">${a.nama}</div>
+          <div class="nk">NIS ${a.nis} · ${a.kelas}</div>
+        </div>
+      </div>
+      <div class="nchk">✓</div>
+    </div>`).join('');
+}
+
+function filterSiswaList(q){
+  const term=q.trim().toLowerCase();
+  const siswa=DB.anggota.filter(a=>a.kelas===selKelas&&a.status==='aktif'&&a.nama.toLowerCase().includes(term));
+  const el=document.getElementById('siswaNlist');
+  if(el)el.innerHTML=renderSiswaItems(siswa);
+}
+
+function pickKelas(k,el){
+  selKelas=k;
+  document.querySelectorAll('.kchip').forEach(c=>c.classList.remove('on'));
+  el.classList.add('on');
+  setTimeout(()=>{absenStep=2;renderStep()},180);
+}
+function pickNama(id,el){
+  selAnggota=id;
+  document.querySelectorAll('.nitem').forEach(n=>n.classList.remove('on'));
+  el.classList.add('on');
+  setTimeout(()=>{absenStep=3;renderStep()},180);
+}
+
+async function doCI(){
+  const input=document.getElementById('ciIn');
+  const kode=input?input.value.trim().toUpperCase():'';
+  const msg=document.getElementById('ciMsg');
+
+  const btnCI=document.querySelector('.btn-ci');
+  if(btnCI){btnCI.disabled=true;btnCI.textContent='Memeriksa Presensi...';}
+
+  // ── GEOFENCE CHECK (radius 150m MAN 19) ──
+  const inRange=await checkGeo();
+  if(inRange===false){
+    if(btnCI){btnCI.disabled=false;btnCI.textContent='✅ Saya Hadir!';}
+    msg.innerHTML=`<div class="ci-msg ci-err">❌ Tidak dapat memproses absensi.<br><span style="font-size:.76rem;opacity:.85">Pastikan kamu hadir di dalam lingkungan MAN 19 Jakarta Selatan.</span></div>`;
+    return;
+  }
+
+  DB=loadDB();
+  const sa=DB.sesi.find(s=>s.kodeAktif);
+  if(btnCI){btnCI.disabled=false;btnCI.textContent='✅ Saya Hadir!';}
+
+  if(!sa){msg.innerHTML=`<div class="ci-msg ci-warn">⏳ Tidak ada sesi aktif saat ini.</div>`;return}
+  if((DB.checkinLog[sa.id]||[]).includes(selAnggota)){renderStep();return}
+  if(kode!==sa.kode){msg.innerHTML=`<div class="ci-msg ci-err">❌ Kode Token salah! Tanya pembina atau ketua eskul kode yang benar.</div>`;input?.focus();return}
+
+  // ── DEVICE LOCK (1 HP 1 SISWA) ──
+  if(!DB.deviceLock)DB.deviceLock={};
+  if(!DB.deviceLock[sa.id])DB.deviceLock[sa.id]={};
+  const lk=DB.deviceLock[sa.id];
+  if(lk[MY_DEV]!==undefined&&lk[MY_DEV]!==selAnggota){
+    const prev=DB.anggota.find(x=>x.id===lk[MY_DEV]);
+    msg.innerHTML=`<div class="ci-msg ci-err">🚫 Perangkat ini sudah digunakan absen oleh <strong>${prev?.nama||'siswa lain'}</strong>.<br><span style="font-size:.76rem;opacity:.85">1 HP hanya boleh absen 1 nama per sesi. Hubungi pembina atau ketua eskul jika ingin reset device.</span></div>`;
+    return;
+  }
+
+  // ── CATAT HADIR ──
+  if(!DB.absensi[sa.id])DB.absensi[sa.id]={};
+  DB.absensi[sa.id][selAnggota]='hadir';
+  if(!DB.checkinLog[sa.id])DB.checkinLog[sa.id]=[];
+  DB.checkinLog[sa.id].push(selAnggota);
+  lk[MY_DEV]=selAnggota;
+  saveDB(DB);
+
+  renderStep();
+  runConfetti();
+  playSuccessSound();
+  toast('Presensi kehadiran berhasil dicatat!');
+}
+
+/* ════════════════════════════════
+   ADMIN AUTH & NAVIGATION
+════════════════════════════════ */
+function openAdmModal(){
+  document.getElementById('admModal').classList.remove('hidden');
+  setTimeout(()=>document.getElementById('adUser').focus(),80);
+}
+function closeAdmModal(){
+  document.getElementById('admModal').classList.add('hidden');
+  document.getElementById('adErr').classList.add('hidden');
+  document.getElementById('adUser').value='';
+  document.getElementById('adPass').value='';
+}
+function doLoginAdmin(){
+  DB=loadDB();
+  const u=document.getElementById('adUser').value.trim();
+  const p=document.getElementById('adPass').value;
+  if(u==='admin'&&p===DB.adminPass){
+    CU={type:'admin',nama:'Pembina'};
+    closeAdmModal();
+    document.getElementById('landingPage').classList.add('hidden');
+    document.getElementById('appPage').classList.remove('hidden');
+    document.getElementById('tbName').textContent='Pembina';
+    document.getElementById('sbName').textContent='Pembina Admin';
+    buildNav();nav('dashboard');
+  }else{
+    document.getElementById('adErr').classList.remove('hidden');
+  }
+}
+function doLogout(){
+  CU=null;
+  document.getElementById('appPage').classList.add('hidden');
+  document.getElementById('landingPage').classList.remove('hidden');
+  updateLandingStats();
+}
+function resetData(){
+  if(!confirm('Reset semua data ke default awal?'))return;
+  ['robotik_man19','robotik_man19_v2','rbk_man19_v3',KEY].forEach(k=>localStorage.removeItem(k));
+  DB=loadDB();updateLandingStats();toast('Data berhasil direset');
+}
+
+const MENUS=[
+  {id:'dashboard',icon:'📊',label:'Dashboard'},
+  {id:'absensiAdmin',icon:'✅',label:'Input Absensi',sec:'MANAJEMEN'},
+  {id:'sesi',icon:'📅',label:'Sesi & Kode Absen'},
+  {id:'anggota',icon:'👥',label:'Data Anggota'},
+  {id:'rekap',icon:'📋',label:'Rekap Absensi',sec:'LAPORAN'},
+  {id:'pengumuman',icon:'📢',label:'Pengumuman',sec:'KONTEN'},
+  {id:'jadwal',icon:'🗓️',label:'Jadwal Latihan'},
+  {id:'pengaturan',icon:'⚙️',label:'Pengaturan',sec:'SISTEM'},
+];
+function buildNav(){
+  const n=document.getElementById('sbnav');n.innerHTML='';
+  MENUS.forEach(m=>{
+    if(m.sec){
+      const li=document.createElement('li');
+      li.innerHTML=`<div class="sbsec">${m.sec}</div>`;
+      n.appendChild(li);
+    }
+    const li=document.createElement('li');
+    li.innerHTML=`<div class="nl" id="nl-${m.id}" onclick="nav('${m.id}')"><span class="ni">${m.icon}</span><span class="nav-text">${m.label}</span></div>`;
+    n.appendChild(li);
+  });
+}
+function nav(p){
+  document.querySelectorAll('.nl').forEach(e=>e.classList.remove('on'));
+  const el=document.getElementById('nl-'+p);if(el)el.classList.add('on');
+  const fn={
+    dashboard:renderDash,sesi:renderSesi,absensiAdmin:renderAbsensiAdmin,
+    anggota:renderAnggota,rekap:renderRekap,pengumuman:renderPengumuman,
+    jadwal:renderJadwal,pengaturan:renderPengaturan
+  };
+  if(fn[p])document.getElementById('mc').innerHTML=fn[p]();
+}
+
+/* ════════════════════════════════
+   ADMIN: DASHBOARD
+════════════════════════════════ */
+function renderDash(){
+  DB=loadDB();
+  const aktif=DB.anggota.filter(a=>a.status==='aktif').length;
+  const sa=DB.sesi.find(s=>s.kodeAktif);
+  let th=0,ta=0,talpha=0;
+  DB.sesi.forEach(ses=>{
+    const rec=DB.absensi[ses.id]||{};
+    DB.anggota.forEach(a=>{
+      ta++;
+      const v=rec[a.id]||'alpha';
+      if(v==='hadir')th++;
+      if(v==='alpha')talpha++;
+    });
+  });
+  const pct=ta?Math.round(th/ta*100):0;
+  const ci3=sa?(DB.checkinLog[sa.id]||[]).length:0;
+
+  const lb=DB.anggota.map(a=>{
+    const st=stts(a.id);
+    return{...a,pct:st.total?Math.round(st.h/st.total*100):0,h:st.h};
+  }).sort((a,b)=>b.pct-a.pct).slice(0,5);
+
+  const lbHtml=lb.map((a,i)=>{
+    const rk=['r1','r2','r3','rn2','rn2'][i];
+    return`<div class="litem">
+      <div class="rank ${rk}">${i===0?'🥇':i===1?'🥈':i===2?'🥉':i+1}</div>
+      <div class="av2">${inits(a.nama)}</div>
+      <div style="flex:1"><div class="lname">${a.nama}</div><div class="lkls">${a.kelas}</div></div>
+      <div class="lbar"><div class="lbar-fill" style="width:${a.pct}%"></div></div>
+      <div class="lpct">${a.pct}%</div>
+    </div>`;
+  }).join('');
+
+  const recentRows=[...DB.sesi].reverse().slice(0,3).map(s=>{
+    const h=Object.values(DB.absensi[s.id]||{}).filter(v=>v==='hadir').length;
+    return`<tr>
+      <td><strong>${s.pertemuan}</strong></td>
+      <td>${fmtD(s.tanggal)}</td>
+      <td>${s.materi}</td>
+      <td><span class="bs2 ${s.kodeAktif?'bg2':'bt2'}">${s.kodeAktif?'🟢 Buka':'🔴 Tutup'}</span></td>
+      <td><strong>${h}</strong>/${aktif}</td>
+    </tr>`;
+  }).join('');
+
+  const ann=DB.pengumuman[DB.pengumuman.length-1];
+  const today=new Date().toISOString().slice(0,10);
+  const nextJad=DB.jadwal.filter(j=>j.tanggal>=today).sort((a,b)=>a.tanggal.localeCompare(b.tanggal))[0]||DB.jadwal[DB.jadwal.length-1];
+
+  return`
+  ${sa?`<div class="sess-banner">
+    <div class="pulse-dot"></div>
+    <div style="flex:1">
+      <div class="st">Sesi Presensi Sedang Buka</div>
+      <div class="sk">${sa.pertemuan} · ${fmtD(sa.tanggal)} · ${sa.materi} · 📱 ${(DB.deviceLock&&DB.deviceLock[sa.id]?Object.keys(DB.deviceLock[sa.id]).length:0)} HP terkunci</div>
+    </div>
+    <div class="kode-badge">${sa.kode}</div>
+    <button class="btn btn-ghost btn-sm" style="color:#fff;border-color:rgba(255,255,255,.35)" onclick="gantiToken(${sa.id})" title="Ganti Token & Otomatis Reset Kunci HP">🔄 Ganti Token</button>
+    <button class="btn btn-red btn-sm" onclick="tutupKode(${sa.id})">Tutup</button>
+  </div>`:''}
+
+  ${ann?`<div style="background:#1e3a8a;border-radius:var(--r);padding:14px 18px;color:#fff;margin-bottom:16px;display:flex;align-items:center;gap:12px">
+    <div style="font-size:1.8rem;flex-shrink:0">📢</div>
+    <div>
+      <div style="font-size:.68rem;text-transform:uppercase;letter-spacing:.06em;color:rgba(255,255,255,.5);margin-bottom:2px">Pengumuman Terbaru</div>
+      <div style="font-size:.92rem;font-weight:700">${ann.judul}</div>
+      <div style="font-size:.76rem;color:rgba(255,255,255,.7);margin-top:2px;line-height:1.45">${ann.isi}</div>
+    </div>
+  </div>`:''}
+
+  <div class="sh">
+    <div>
+      <h2>Dashboard Administrator</h2>
+      <p>${new Date().toLocaleDateString('id-ID',{weekday:'long',year:'numeric',month:'long',day:'numeric'})} · MAN 19 Jakarta Selatan</p>
+    </div>
+  </div>
+
+  <div class="sg">
+    <div class="sc c-blue"><div class="si2 si-b">👥</div><div><div class="sv">${aktif}</div><div class="sl">Anggota Aktif</div></div></div>
+    <div class="sc c-green"><div class="si2 si-g">✅</div><div><div class="sv">${pct}%</div><div class="sl">Rata-rata Hadir</div></div></div>
+    <div class="sc c-yellow"><div class="si2 si-y">📅</div><div><div class="sv">${DB.sesi.length}</div><div class="sl">Total Pertemuan</div></div></div>
+    <div class="sc c-red"><div class="si2 si-r">❌</div><div><div class="sv">${talpha}</div><div class="sl">Total Alpha</div></div></div>
+    <div class="sc c-purple"><div class="si2 si-p">${sa?'🔓':'🔒'}</div><div><div class="sv">${sa?ci3+' Siswa':'Tutup'}</div><div class="sl">${sa?'Self Check-in':'Sesi Absen'}</div></div></div>
+  </div>
+
+  <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(120px,1fr));gap:9px;margin-bottom:18px">
+    <div style="background:var(--card);border:1px solid var(--b1);border-radius:var(--r);padding:12px;cursor:pointer;text-align:center;box-shadow:var(--sh);transition:all .16s" onclick="nav('absensiAdmin')" onmouseover="this.style.borderColor='var(--blue)'" onmouseout="this.style.borderColor='var(--b1)'">
+      <div style="font-size:1.4rem;margin-bottom:4px">✅</div><div style="font-size:.74rem;font-weight:700;color:var(--ink2)">Input Absensi</div>
+    </div>
+    <div style="background:var(--card);border:1px solid var(--b1);border-radius:var(--r);padding:12px;cursor:pointer;text-align:center;box-shadow:var(--sh);transition:all .16s" onclick="nav('rekap')" onmouseover="this.style.borderColor='var(--blue)'" onmouseout="this.style.borderColor='var(--b1)'">
+      <div style="font-size:1.4rem;margin-bottom:4px">📋</div><div style="font-size:.74rem;font-weight:700;color:var(--ink2)">Rekap & Kelola</div>
+    </div>
+    <div style="background:var(--card);border:1px solid var(--b1);border-radius:var(--r);padding:12px;cursor:pointer;text-align:center;box-shadow:var(--sh);transition:all .16s" onclick="nav('sesi')" onmouseover="this.style.borderColor='var(--blue)'" onmouseout="this.style.borderColor='var(--b1)'">
+      <div style="font-size:1.4rem;margin-bottom:4px">📅</div><div style="font-size:.74rem;font-weight:700;color:var(--ink2)">Buka Token</div>
+    </div>
+    <div style="background:var(--card);border:1px solid var(--b1);border-radius:var(--r);padding:12px;cursor:pointer;text-align:center;box-shadow:var(--sh);transition:all .16s" onclick="nav('anggota')" onmouseover="this.style.borderColor='var(--blue)'" onmouseout="this.style.borderColor='var(--b1)'">
+      <div style="font-size:1.4rem;margin-bottom:4px">👥</div><div style="font-size:.74rem;font-weight:700;color:var(--ink2)">Data Anggota</div>
+    </div>
+    <div style="background:var(--card);border:1px solid var(--b1);border-radius:var(--r);padding:12px;cursor:pointer;text-align:center;box-shadow:var(--sh);transition:all .16s" onclick="exportCSV()" onmouseover="this.style.borderColor='var(--blue)'" onmouseout="this.style.borderColor='var(--b1)'">
+      <div style="font-size:1.4rem;margin-bottom:4px">⬇️</div><div style="font-size:.74rem;font-weight:700;color:var(--ink2)">Export CSV</div>
+    </div>
+    <div style="background:var(--card);border:1px solid var(--b1);border-radius:var(--r);padding:12px;cursor:pointer;text-align:center;box-shadow:var(--sh);transition:all .16s" onclick="nav('pengaturan')" onmouseover="this.style.borderColor='var(--blue)'" onmouseout="this.style.borderColor='var(--b1)'">
+      <div style="font-size:1.4rem;margin-bottom:4px">⚙️</div><div style="font-size:.74rem;font-weight:700;color:var(--ink2)">Device Lock</div>
+    </div>
+  </div>
+
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:16px">
+    <div class="card" style="margin-bottom:0">
+      <div class="ch"><h3>🏆 Leaderboard Kehadiran</h3></div>
+      <div class="cb"><div class="lboard">${lbHtml}</div></div>
+    </div>
+    <div class="card" style="margin-bottom:0">
+      <div class="ch"><h3>🗓️ Jadwal Berikutnya</h3><button class="btn btn-ghost btn-sm" onclick="nav('jadwal')">Semua</button></div>
+      <div class="cb">
+        ${nextJad?`<div style="text-align:center;padding:10px 0">
+          <div style="font-size:2.2rem;font-weight:900;color:var(--blue);font-family:'Space Grotesk'">${nextJad.tanggal.split('-')[2]}</div>
+          <div style="font-size:.72rem;color:var(--muted);text-transform:uppercase;font-weight:700">${['Jan','Feb','Mar','Apr','Mei','Jun','Jul','Agu','Sep','Okt','Nov','Des'][+nextJad.tanggal.split('-')[1]-1]} ${nextJad.tanggal.split('-')[0]}</div>
+          <div style="margin-top:10px;font-size:.88rem;font-weight:700;color:var(--ink)">${nextJad.topik}</div>
+          <div style="font-size:.74rem;color:var(--muted);margin-top:3px">⏰ ${nextJad.waktu} · 📍 ${nextJad.lokasi}</div>
+        </div>`:'<p style="text-align:center;color:var(--muted);padding:18px 0;font-size:.82rem">Tidak ada jadwal</p>'}
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="ch"><h3>📋 Sesi Terakhir</h3><button class="btn btn-ghost btn-sm" onclick="nav('sesi')">Kelola Sesi</button></div>
+    <div class="tw"><table><thead><tr><th>Pertemuan</th><th>Tanggal</th><th>Materi</th><th>Status</th><th>Hadir</th></tr></thead>
+    <tbody>${recentRows}</tbody></table></div>
+  </div>`;
+}
+
+/* ════════════════════════════════
+   ADMIN: SESI & TOKEN (AUTO-RESET LOCK)
+════════════════════════════════ */
+function renderSesi(){
+  const rows=DB.sesi.map(s=>{
+    const h=Object.values(DB.absensi[s.id]||{}).filter(v=>v==='hadir').length;
+    const ci=(DB.checkinLog[s.id]||[]).length;
+    const devCount=DB.deviceLock&&DB.deviceLock[s.id]?Object.keys(DB.deviceLock[s.id]).length:0;
+    return`<tr>
+      <td><strong>${s.pertemuan}</strong></td>
+      <td>${fmtD(s.tanggal)}</td>
+      <td>${s.materi}</td>
+      <td><div style="display:flex;align-items:center;gap:7px;flex-wrap:wrap">
+        <span class="bs2 ${s.kodeAktif?'bg2':'bt2'}">${s.kodeAktif?'🟢 Buka':'🔴 Tutup'}</span>
+        ${s.kodeAktif
+          ?`<code style="font-size:.88rem;font-weight:900;color:var(--blue);letter-spacing:.1em;background:var(--bg);padding:2px 7px;border-radius:5px;border:1px solid var(--b1)">${s.kode}</code>
+            <button class="btn btn-ghost btn-xs" onclick="gantiToken(${s.id})" title="Ganti Token & Otomatis Reset Lock HP">🔄 Ganti Token</button>
+            <button class="btn btn-red btn-xs" onclick="tutupKode(${s.id})">🔒 Tutup</button>`
+          :`<button class="btn btn-ok btn-xs" onclick="bukaKode(${s.id})">🔑 Buka Absen</button>`
+        }
+      </div></td>
+      <td><strong>${h}</strong>/${DB.anggota.length} <span style="font-size:.68rem;color:var(--muted)">(${ci} self · 📱 ${devCount} HP)</span></td>
+      <td style="display:flex;gap:4px">
+        <button class="btn btn-ghost btn-xs" onclick="resetDLSesi(${s.id})" title="Reset Device Lock HP Sesi Ini">🔓</button>
+        <button class="btn btn-ghost btn-xs" onclick="editSesi(${s.id})">✏️</button>
+        <button class="btn btn-red btn-xs" onclick="delSesi(${s.id})">🗑️</button>
+      </td>
+    </tr>`;
+  }).join('');
+  return`
+  <div class="sh"><div><h2>📅 Sesi & Token Presensi</h2><p>Buka kode saat latihan dimulai, tutup setelah selesai</p></div>
+    <div style="display:flex;gap:8px;flex-wrap:wrap">
+      <button class="btn btn-ghost btn-sm" onclick="nav('pengaturan')">⚙️ Kelola Device Lock</button>
+      <button class="btn btn-p" onclick="openSesi()">+ Tambah Sesi</button>
+    </div>
+  </div>
+  <div class="info-box">🔒 <strong>Keamanan Device Lock:</strong> 1 HP hanya bisa absen 1 nama siswa. <em>Setiap kali token diganti atau dibuka ulang, data penguncian HP pada sesi tersebut otomatis direset.</em></div>
+  <div class="card"><div class="tw">
+    <table><thead><tr><th>Pertemuan</th><th>Tanggal</th><th>Materi</th><th>Kode Absen</th><th>Kehadiran</th><th>Aksi</th></tr></thead>
+    <tbody>${rows}</tbody></table>
+  </div></div>`;
+}
+
+function bukaKode(id){
+  DB.sesi.forEach(s=>{if(s.id!==id)s.kodeAktif=false});
+  const s=DB.sesi.find(x=>x.id===id);s.kode=genKode();s.kodeAktif=true;
+  if(!DB.deviceLock)DB.deviceLock={};
+  DB.deviceLock[id]={};
+  saveDB(DB);nav('sesi');toast(`Kode dibuka: ${s.kode} (Lock HP direset)`);
+}
+function gantiToken(id){
+  const s=DB.sesi.find(x=>x.id===id);
+  if(!s)return;
+  if(!confirm(`Generate token baru untuk ${s.pertemuan}?\n\nLock HP semua siswa pada sesi ini akan otomatis direset.`))return;
+  s.kode=genKode();
+  s.kodeAktif=true;
+  if(!DB.deviceLock)DB.deviceLock={};
+  DB.deviceLock[id]={};
+  saveDB(DB);
+  if(document.getElementById('nl-dashboard')?.classList.contains('on'))nav('dashboard');
+  else nav('sesi');
+  toast(`Token baru: ${s.kode} & Lock HP direset!`);
+}
+function tutupKode(id){
+  DB.sesi.find(x=>x.id===id).kodeAktif=false;saveDB(DB);
+  document.getElementById('nl-dashboard')?.classList.contains('on')?nav('dashboard'):nav('sesi');
+  toast('Sesi absen ditutup');
+}
+function openSesi(id=null){
+  const s=id?DB.sesi.find(x=>x.id===id):null;
+  document.getElementById('mc2').innerHTML=`
+  <div class="mbk" onclick="closeOut(event)"><div class="modal">
+    <h3>${s?'Edit Sesi':'Tambah Sesi Latihan'}</h3>
+    <div class="fr">
+      <div class="fg"><label>Pertemuan</label><input id="sp" value="${s?s.pertemuan:''}" placeholder="Pertemuan 4"/></div>
+      <div class="fg"><label>Tanggal</label><input type="date" id="st" value="${s?s.tanggal:''}"/></div>
+    </div>
+    <div class="fg"><label>Materi / Topik</label><input id="sm" value="${s?s.materi:''}" placeholder="Topik latihan hari ini"/></div>
+    <div class="mf"><button class="btn btn-ghost" onclick="closeModal()">Batal</button><button class="btn btn-p" onclick="saveSesi(${id||'null'})">💾 Simpan</button></div>
+  </div></div>`;
+}
+function editSesi(id){openSesi(id)}
+function saveSesi(id){
+  const p=document.getElementById('sp').value.trim(),t=document.getElementById('st').value,m=document.getElementById('sm').value.trim();
+  if(!p||!t||!m){alert('Isi semua field.');return}
+  if(id)Object.assign(DB.sesi.find(x=>x.id===id),{pertemuan:p,tanggal:t,materi:m});
+  else DB.sesi.push({id:DB.nextId.sesi++,tanggal:t,pertemuan:p,materi:m,kode:genKode(),kodeAktif:false});
+  saveDB(DB);closeModal();nav('sesi');toast('Sesi disimpan!');
+}
+function delSesi(id){
+  if(!confirm('Hapus sesi ini?'))return;
+  DB.sesi=DB.sesi.filter(x=>x.id!==id);
+  delete DB.absensi[id];delete DB.checkinLog[id];
+  if(DB.deviceLock)delete DB.deviceLock[id];
+  saveDB(DB);nav('sesi');toast('Sesi dihapus');
+}
+
+/* ════════════════════════════════
+   ADMIN: DATA ANGGOTA & RESET HP
+════════════════════════════════ */
+function renderAnggota(){
+  const sa=DB.sesi.find(s=>s.kodeAktif);
+  const rows=DB.anggota.map(a=>{
+    const st=stts(a.id);const pct=st.total?Math.round(st.h/st.total*100):0;
+    const isLocked=sa&&DB.deviceLock&&DB.deviceLock[sa.id]&&Object.values(DB.deviceLock[sa.id]).includes(a.id);
+    return`<tr>
+      <td>${a.nis}</td>
+      <td>
+        <div class="tdn">
+          <div class="av2">${inits(a.nama)}</div>
+          <div>
+            <div style="font-weight:700">${a.nama}</div>
+            ${isLocked?`<span style="display:inline-flex;align-items:center;gap:3px;font-size:.65rem;color:#b45309;background:#fef3c7;padding:1px 6px;border-radius:4px;font-weight:700">📱 HP Terkunci (Sesi Aktif)</span>`:''}
+          </div>
+        </div>
+      </td>
+      <td>${a.kelas}</td>
+      <td><div class="bw" style="min-width:80px"><div class="bl"><span></span><span>${pct}%</span></div><div class="bb"><div class="bf ${pct>=75?'bf-h':'bf-a'}" style="width:${pct}%"></div></div></div></td>
+      <td><span class="bs2 ${a.status==='aktif'?'bh':'ba'}">${a.status}</span></td>
+      <td style="display:flex;gap:4px">
+        <button class="btn btn-ghost btn-xs" onclick="resetDevSiswa(${a.id},'${a.nama.replace(/'/g,"\\'")}')" title="Reset Device Lock (Buka Kunci HP Siswa Ini)">🔓 Reset HP</button>
+        <button class="btn btn-ghost btn-xs" onclick="editAnggota(${a.id})" title="Edit Data Siswa">✏️</button>
+        <button class="btn btn-red btn-xs" onclick="delAnggota(${a.id})" title="Hapus Siswa">🗑️</button>
+      </td>
+    </tr>`;
+  }).join('');
+  return`
+  <div class="sh"><div><h2>👥 Data Anggota</h2><p>${DB.anggota.length} anggota terdaftar · Klik <strong>🔓 Reset HP</strong> untuk membuka kunci device siswa</p></div>
+    <div style="display:flex;gap:8px;flex-wrap:wrap">
+      <button class="btn btn-ghost btn-sm" onclick="nav('pengaturan')">⚙️ Pengaturan Device Lock</button>
+      <button class="btn btn-p" onclick="openAnggota()">+ Tambah Anggota</button>
+    </div>
+  </div>
+  <div class="card"><div class="tw">
+    <table><thead><tr><th>NIS</th><th>Nama</th><th>Kelas</th><th>% Hadir</th><th>Status</th><th>Aksi</th></tr></thead>
+    <tbody>${rows}</tbody></table>
+  </div></div>`;
+}
+function openAnggota(id=null){
+  const a=id?DB.anggota.find(x=>x.id===id):null;
+  document.getElementById('mc2').innerHTML=`
+  <div class="mbk" onclick="closeOut(event)"><div class="modal">
+    <h3>${a?'Edit Anggota':'Tambah Anggota Baru'}</h3>
+    <div class="fr">
+      <div class="fg"><label>NIS</label><input id="an" value="${a?a.nis:''}" placeholder="037"/></div>
+      <div class="fg"><label>Nama Lengkap</label><input id="anm" value="${a?a.nama:''}" placeholder="Nama siswa"/></div>
+    </div>
+    <div class="fr">
+      <div class="fg"><label>Kelas</label><input id="ak" value="${a?a.kelas:''}" placeholder="X-A"/></div>
+      <div class="fg"><label>Angkatan</label><input id="ang" value="${a?a.angkatan:'2026'}" placeholder="2026"/></div>
+    </div>
+    <div class="fg"><label>Status</label>
+      <select id="as"><option value="aktif" ${!a||a.status==='aktif'?'selected':''}>Aktif</option><option value="nonaktif" ${a&&a.status==='nonaktif'?'selected':''}>Non-aktif</option></select>
+    </div>
+    <div class="mf"><button class="btn btn-ghost" onclick="closeModal()">Batal</button><button class="btn btn-p" onclick="saveAnggota(${id||'null'})">💾 Simpan</button></div>
+  </div></div>`;
+}
+function editAnggota(id){openAnggota(id)}
+function saveAnggota(id){
+  const nis=document.getElementById('an').value.trim(),nama=document.getElementById('anm').value.trim(),kelas=document.getElementById('ak').value.trim(),angkatan=document.getElementById('ang').value.trim(),status=document.getElementById('as').value;
+  if(!nis||!nama||!kelas){alert('NIS, Nama, Kelas wajib diisi.');return}
+  if(id)Object.assign(DB.anggota.find(x=>x.id===id),{nis,nama,kelas,angkatan,status});
+  else DB.anggota.push({id:DB.nextId.anggota++,nis,nama,kelas,angkatan,status});
+  saveDB(DB);closeModal();nav('anggota');toast('Anggota disimpan!');
+}
+function delAnggota(id){
+  if(!confirm('Hapus anggota ini?'))return;
+  DB.anggota=DB.anggota.filter(x=>x.id!==id);
+  saveDB(DB);nav('anggota');toast('Anggota dihapus');
+}
+
+/* ════════════════════════════════
+   ADMIN: INPUT ABSENSI MANUAL
+════════════════════════════════ */
+let absSesiId=null;
+function renderAbsensiAdmin(){
+  const sesiOpts=DB.sesi.map(s=>`<option value="${s.id}">${s.pertemuan} – ${fmtD(s.tanggal)}</option>`).join('');
+  return`
+  <div class="sh"><div><h2>✅ Input Absensi Manual</h2><p>Isi status kehadiran manual per sesi, lalu klik Simpan</p></div></div>
+  <div class="card" style="margin-bottom:14px">
+    <div class="cb" style="display:flex;align-items:center;gap:12px;flex-wrap:wrap">
+      <div class="fg" style="margin:0;flex:1;min-width:200px">
+        <label>Pilih Sesi Latihan</label>
+        <select id="absSesiPicker" onchange="loadAbsGrid()">
+          <option value="">-- Pilih Sesi --</option>${sesiOpts}
+        </select>
+      </div>
+      <div style="display:flex;gap:8px;margin-top:16px;flex-wrap:wrap">
+        <button class="btn btn-ok btn-sm" onclick="setAllAbs('hadir')">✅ Semua Hadir</button>
+        <button class="btn btn-ghost btn-sm" onclick="setAllAbs('alpha')">❌ Semua Alpha</button>
+        <button class="btn btn-p" onclick="saveAbsensi()">💾 Simpan Absensi</button>
+      </div>
+    </div>
+  </div>
+  <div id="absGrid"></div>`;
+}
+function loadAbsGrid(){
+  absSesiId=parseInt(document.getElementById('absSesiPicker').value)||null;
+  const grid=document.getElementById('absGrid');
+  if(!absSesiId){grid.innerHTML='';return}
+  const rec=DB.absensi[absSesiId]||{};
+  const cards=DB.anggota.map(a=>{
+    const cur=rec[a.id]||'alpha';
+    const pills=['hadir','izin','sakit','alpha'].map(st=>`
+      <span class="spill spill-${st[0]} ${cur===st?'on':''}"
+        onclick="setOnePill(${a.id},'${st}',this)">${st.charAt(0).toUpperCase()+st.slice(1)}</span>`
+    ).join('');
+    return`<div class="ab-card" id="abc-${a.id}">
+      <div class="av3">${inits(a.nama)}</div>
+      <div class="ainfo">
+        <div class="aname">${a.nama}</div>
+        <div class="akls">${a.kelas}</div>
+        <div class="status-pills">${pills}</div>
+      </div>
+    </div>`;
+  }).join('');
+  grid.innerHTML=`<div class="ab-grid">${cards}</div>`;
+}
+function setOnePill(aid,status,el){
+  const card=document.getElementById('abc-'+aid);
+  card.querySelectorAll('.spill').forEach(p=>p.classList.remove('on'));
+  el.classList.add('on');
+}
+function setAllAbs(status){
+  if(!absSesiId){toast('Pilih sesi dulu!');return}
+  DB.anggota.forEach(a=>{
+    const card=document.getElementById('abc-'+a.id);
+    if(!card)return;
+    card.querySelectorAll('.spill').forEach(p=>p.classList.remove('on'));
+    card.querySelectorAll('.spill').forEach(p=>{
+      if(p.textContent.toLowerCase().trim()===status)p.classList.add('on');
+    });
+  });
+}
+function saveAbsensi(){
+  if(!absSesiId){toast('Pilih sesi dulu!');return}
+  if(!DB.absensi[absSesiId])DB.absensi[absSesiId]={};
+  DB.anggota.forEach(a=>{
+    const card=document.getElementById('abc-'+a.id);
+    if(!card)return;
+    const onPill=card.querySelector('.spill.on');
+    if(!onPill)return;
+    const txt=onPill.textContent.toLowerCase().trim();
+    DB.absensi[absSesiId][a.id]=txt||'alpha';
+  });
+  saveDB(DB);
+  toast('✅ Absensi berhasil disimpan!');
+}
+
+/* ════════════════════════════════
+   ADMIN: REKAP ABSENSI & EXPORT
+════════════════════════════════ */
+function renderRekap(){
+  const sh=DB.sesi.map(s=>`<th style="text-align:center" title="${s.materi}">${s.pertemuan.replace('Pertemuan ','P')}</th>`).join('');
+  const rows=DB.anggota.map(a=>{
+    const st=stts(a.id);const pct=st.total?Math.round(st.h/st.total*100):0;
+    const cells=DB.sesi.map(s=>{
+      const v=(DB.absensi[s.id]||{})[a.id]||'alpha';
+      const ci=(DB.checkinLog[s.id]||[]).includes(a.id);
+      const lb={hadir:'H',izin:'I',sakit:'S',alpha:'A'};
+      return`<td style="text-align:center"><span class="bs2 b${v==='sakit'?'sa':v[0]}" title="${ci?'Self check-in':''}">${lb[v]}${ci?'*':''}</span></td>`;
+    }).join('');
+    return`<tr style="cursor:pointer" onclick="profilSiswa(${a.id})" title="Klik untuk kelola siswa ini">
+      <td><div class="tdn"><div class="av2">${inits(a.nama)}</div><span style="color:var(--blue);font-weight:700">${a.nama}</span></div></td>
+      <td>${a.kelas}</td>${cells}
+      <td style="text-align:center;font-weight:800;color:var(--green)">${st.h}</td>
+      <td style="text-align:center;font-weight:800;color:var(--yellow)">${st.i}</td>
+      <td style="text-align:center;font-weight:800;color:#2563eb">${st.s}</td>
+      <td style="text-align:center;font-weight:800;color:var(--red)">${st.a}</td>
+      <td>
+        <div class="bw" style="min-width:65px"><div class="bl"><span></span><span style="color:${pct>=75?'var(--green)':'var(--red)'};font-weight:700">${pct}%</span></div>
+        <div class="bb"><div class="bf ${pct>=75?'bf-h':'bf-a'}" style="width:${pct}%"></div></div></div>
+      </td>
+    </tr>`;
+  }).join('');
+  return`
+  <div class="sh"><div><h2>📋 Rekap Absensi</h2><p>Klik nama siswa untuk kelola kehadiran & reset device · * = self check-in</p></div>
+    <div style="display:flex;gap:8px;flex-wrap:wrap">
+      <button class="btn btn-ghost btn-sm" onclick="exportCSV()">⬇️ Export CSV</button>
+      <button class="btn btn-p btn-sm" onclick="window.print()">🖨️ Cetak</button>
+    </div>
+  </div>
+  <div class="card"><div class="tw">
+    <table><thead><tr><th>Nama</th><th>Kelas</th>${sh}<th style="text-align:center">H</th><th style="text-align:center">I</th><th style="text-align:center">S</th><th style="text-align:center">A</th><th>%</th></tr></thead>
+    <tbody>${rows}</tbody></table>
+  </div></div>`;
+}
+
+function exportCSV(){
+  const header=['Nama','Kelas',...DB.sesi.map(s=>s.pertemuan),'Hadir','Izin','Sakit','Alpha','% Hadir'];
+  const rows=DB.anggota.map(a=>{
+    const st=stts(a.id);
+    const pct=st.total?Math.round(st.h/st.total*100):0;
+    const cells=DB.sesi.map(s=>{
+      const v=(DB.absensi[s.id]||{})[a.id]||'Alpha';
+      return v.charAt(0).toUpperCase()+v.slice(1);
+    });
+    return[a.nama,a.kelas,...cells,st.h,st.i,st.s,st.a,pct+'%'];
+  });
+  const csv=[header,...rows].map(r=>r.map(c=>`"${String(c).replace(/"/g,'""')}"`).join(',')).join('\n');
+  const blob=new Blob(['\uFEFF'+csv],{type:'text/csv;charset=utf-8'});
+  const url=URL.createObjectURL(blob);
+  const a=document.createElement('a');
+  a.href=url;a.download=`rekap-absensi-nineteentech-${new Date().toISOString().slice(0,10)}.csv`;
+  document.body.appendChild(a);a.click();document.body.removeChild(a);
+  URL.revokeObjectURL(url);
+  toast('CSV berhasil diexport!');
+}
+
+/* ════════════════════════════════
+   ADMIN: PROFIL SISWA & DEVICE LOCK
+════════════════════════════════ */
+function profilSiswa(aid){
+  const a=DB.anggota.find(x=>x.id===aid);
+  const st=stts(aid);
+  const pct=st.total?Math.round(st.h/st.total*100):0;
+  const sa=DB.sesi.find(s=>s.kodeAktif);
+
+  const sesiRows=DB.sesi.map(s=>{
+    const v=(DB.absensi[s.id]||{})[aid]||'alpha';
+    const ci=(DB.checkinLog[s.id]||[]).includes(aid);
+    const opts=['hadir','izin','sakit','alpha'].map(opt=>`
+      <option value="${opt}" ${v===opt?'selected':''}>${opt.charAt(0).toUpperCase()+opt.slice(1)}</option>`
+    ).join('');
+    return`<div class="sesi-edit-row">
+      <div>
+        <div class="sn2">${s.pertemuan}</div>
+        <div class="sd2">${fmtD(s.tanggal)} · ${s.materi}${ci?' · <span style="color:var(--blue);font-weight:700">Self CI</span>':''}</div>
+      </div>
+      <select id="ps-${s.id}-${aid}" style="padding:5px 8px;border-radius:6px;border:1.5px solid var(--b1);font-size:.78rem;font-weight:600">
+        ${opts}
+      </select>
+    </div>`;
+  }).join('');
+
+  document.getElementById('mc2').innerHTML=`
+  <div class="mbk" onclick="closeOut(event)">
+  <div class="modal" style="max-width:540px">
+    <div class="profil-header">
+      <div class="pav">${inits(a.nama)}</div>
+      <div>
+        <div class="pn">${a.nama}</div>
+        <div class="pm">NIS ${a.nis} · ${a.kelas} · Angkatan ${a.angkatan}</div>
+      </div>
+    </div>
+
+    <div class="profil-stat-row">
+      <div class="pstat"><div class="pv" style="color:var(--green)">${st.h}</div><div class="pl">Hadir</div></div>
+      <div class="pstat"><div class="pv" style="color:var(--yellow)">${st.i}</div><div class="pl">Izin</div></div>
+      <div class="pstat"><div class="pv" style="color:#2563eb">${st.s}</div><div class="pl">Sakit</div></div>
+      <div class="pstat"><div class="pv" style="color:var(--red)">${st.a}</div><div class="pl">Alpha</div></div>
+    </div>
+
+    <div style="display:flex;gap:4px;margin-bottom:14px;background:#f8fafc;border-radius:8px;padding:3px;border:1px solid var(--b1)">
+      <button class="btn btn-p btn-sm" id="tabAbsen" onclick="switchProfilTab('absen',${aid})" style="flex:1;border-radius:6px">📋 Kehadiran</button>
+      <button class="btn btn-ghost btn-sm" id="tabData" onclick="switchProfilTab('data',${aid})" style="flex:1;border-radius:6px">✏️ Edit Data</button>
+      <button class="btn btn-ghost btn-sm" id="tabLain" onclick="switchProfilTab('lain',${aid})" style="flex:1;border-radius:6px">⚙️ Lainnya & Lock</button>
+    </div>
+
+    <div id="tabContent-absen">
+      <p style="font-size:.75rem;color:var(--muted);margin-bottom:10px">Ubah status kehadiran per pertemuan, lalu klik Simpan:</p>
+      <div>${sesiRows}</div>
+      <div style="margin-top:12px;display:flex;gap:6px;flex-wrap:wrap">
+        <button class="btn btn-ok btn-sm" onclick="setAllSesiSiswa(${aid},'hadir')">✅ Semua Hadir</button>
+        <button class="btn btn-ghost btn-sm" onclick="setAllSesiSiswa(${aid},'alpha')">❌ Semua Alpha</button>
+      </div>
+    </div>
+
+    <div id="tabContent-data" class="hidden">
+      <div class="fr">
+        <div class="fg"><label>NIS</label><input id="ed-nis" value="${a.nis}"/></div>
+        <div class="fg"><label>Nama Lengkap</label><input id="ed-nama" value="${a.nama}"/></div>
+      </div>
+      <div class="fr">
+        <div class="fg"><label>Kelas</label><input id="ed-kelas" value="${a.kelas}"/></div>
+        <div class="fg"><label>Angkatan</label><input id="ed-angkatan" value="${a.angkatan}"/></div>
+      </div>
+      <div class="fg"><label>Status</label>
+        <select id="ed-status">
+          <option value="aktif" ${a.status==='aktif'?'selected':''}>Aktif</option>
+          <option value="nonaktif" ${a.status==='nonaktif'?'selected':''}>Non-aktif</option>
+        </select>
+      </div>
+    </div>
+
+    <div id="tabContent-lain" class="hidden">
+      <div style="display:flex;flex-direction:column;gap:10px">
+        <div style="background:var(--bg);border:1px solid var(--b1);border-radius:8px;padding:12px">
+          <div style="font-size:.82rem;font-weight:700;color:var(--ink);margin-bottom:3px">🔓 Reset Device Lock Siswa Ini</div>
+          <div style="font-size:.74rem;color:var(--muted);margin-bottom:8px">Reset agar siswa ini bisa presensi dari HP yang berbeda.</div>
+          <button class="btn btn-ghost btn-sm" onclick="resetDevSiswa(${aid},'${a.nama.replace(/'/g,"\\'")}')">🔓 Reset Device Lock</button>
+        </div>
+        ${sa ? `
+        <div style="background:var(--bg);border:1px solid var(--b1);border-radius:8px;padding:12px">
+          <div style="font-size:.82rem;font-weight:700;color:var(--ink);margin-bottom:3px">🔄 Izinkan Presensi Ulang di Sesi Aktif</div>
+          <div style="font-size:.74rem;color:var(--muted);margin-bottom:8px">Hapus riwayat check-in dan kunci HP siswa ini di ${sa.pertemuan} agar bisa input token kembali.</div>
+          <button class="btn btn-ghost btn-sm" onclick="resetCheckinSiswa(${aid}, ${sa.id}, '${a.nama.replace(/'/g,"\\'")}')">🔄 Reset Check-in Sesi Aktif</button>
+        </div>` : ''}
+        <div style="background:var(--bg);border:1px solid var(--b1);border-radius:8px;padding:12px">
+          <div style="font-size:.82rem;font-weight:700;color:var(--ink);margin-bottom:3px">🗑️ Hapus Siswa</div>
+          <div style="font-size:.74rem;color:var(--muted);margin-bottom:8px">Menghapus data siswa ini dari seluruh sistem secara permanen.</div>
+          <button class="btn btn-red btn-sm" onclick="delSiswaFromProfil(${aid})">🗑️ Hapus Siswa Ini</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="mf">
+      <button class="btn btn-ghost" onclick="closeModal()">Tutup</button>
+      <button class="btn btn-p" onclick="saveProfilSiswa(${aid})">💾 Simpan Perubahan</button>
+    </div>
+  </div></div>`;
+}
+
+function switchProfilTab(tab, aid){
+  ['absen','data','lain'].forEach(t=>{
+    document.getElementById('tabContent-'+t)?.classList.toggle('hidden',t!==tab);
+    const btn=document.getElementById('tab'+t.charAt(0).toUpperCase()+t.slice(1));
+    if(btn){
+      btn.className=t===tab?'btn btn-p btn-sm':'btn btn-ghost btn-sm';
+      btn.style.flex='1';btn.style.borderRadius='6px';
+    }
+  });
+}
+function setAllSesiSiswa(aid, status){
+  DB.sesi.forEach(s=>{
+    const sel=document.getElementById(`ps-${s.id}-${aid}`);
+    if(sel){sel.value=status;sel.style.borderColor='var(--blue)';sel.style.fontWeight='700'}
+  });
+}
+function saveProfilSiswa(aid){
+  const a=DB.anggota.find(x=>x.id===aid);
+  const edNis=document.getElementById('ed-nis');
+  if(edNis){
+    a.nis=edNis.value.trim()||a.nis;
+    a.nama=document.getElementById('ed-nama').value.trim()||a.nama;
+    a.kelas=document.getElementById('ed-kelas').value.trim()||a.kelas;
+    a.angkatan=document.getElementById('ed-angkatan').value.trim()||a.angkatan;
+    a.status=document.getElementById('ed-status').value;
+  }
+  DB.sesi.forEach(s=>{
+    const sel=document.getElementById(`ps-${s.id}-${aid}`);
+    if(!sel)return;
+    if(!DB.absensi[s.id])DB.absensi[s.id]={};
+    DB.absensi[s.id][aid]=sel.value;
+  });
+  saveDB(DB);closeModal();nav('rekap');toast('✅ Data siswa berhasil disimpan!');
+}
+
+function resetDevSiswa(aid, nama=''){
+  if(!nama){const a=DB.anggota.find(x=>x.id===aid);nama=a?a.nama:'Siswa ini';}
+  if(!confirm(`Reset device lock untuk ${nama}?\n\nHP yang terkunci pada siswa ini akan dibebaskan agar bisa dipakai lagi.`))return;
+  if(!DB.deviceLock)DB.deviceLock={};
+  DB.sesi.forEach(s=>{
+    if(!DB.deviceLock[s.id])return;
+    Object.keys(DB.deviceLock[s.id]).forEach(dev=>{
+      if(DB.deviceLock[s.id][dev]===aid)delete DB.deviceLock[s.id][dev];
+    });
+  });
+  saveDB(DB);toast(`Device lock untuk ${nama} berhasil direset!`);
+  if(document.getElementById('nl-anggota')?.classList.contains('on'))nav('anggota');
+  else if(document.getElementById('nl-pengaturan')?.classList.contains('on'))nav('pengaturan');
+  else if(document.getElementById('nl-dashboard')?.classList.contains('on'))nav('dashboard');
+}
+
+function resetCheckinSiswa(aid, sesiId, nama=''){
+  if(!confirm(`Izinkan ${nama} presensi ulang di sesi aktif?\n\nStatus hadir dan kunci HP-nya di sesi ini akan dihapus.`))return;
+  if(DB.checkinLog&&DB.checkinLog[sesiId]){
+    DB.checkinLog[sesiId]=DB.checkinLog[sesiId].filter(x=>x!==aid);
+  }
+  if(DB.deviceLock&&DB.deviceLock[sesiId]){
+    Object.keys(DB.deviceLock[sesiId]).forEach(dev=>{
+      if(DB.deviceLock[sesiId][dev]===aid)delete DB.deviceLock[sesiId][dev];
+    });
+  }
+  if(DB.absensi&&DB.absensi[sesiId]){delete DB.absensi[sesiId][aid];}
+  saveDB(DB);toast(`Check-in ${nama} direset. Siswa dapat input token kembali!`);
+  profilSiswa(aid);
+}
+
+function delSiswaFromProfil(aid){
+  const a=DB.anggota.find(x=>x.id===aid);
+  if(!confirm(`Hapus ${a?.nama} dari seluruh sistem? Aksi ini tidak dapat dibatalkan.`))return;
+  DB.anggota=DB.anggota.filter(x=>x.id!==aid);
+  DB.sesi.forEach(s=>{
+    if(DB.absensi[s.id])delete DB.absensi[s.id][aid];
+    if(DB.checkinLog[s.id])DB.checkinLog[s.id]=DB.checkinLog[s.id].filter(x=>x!==aid);
+  });
+  saveDB(DB);closeModal();nav('rekap');toast('Siswa berhasil dihapus.');
+}
+
+/* ════════════════════════════════
+   ADMIN: PENGUMUMAN & JADWAL
+════════════════════════════════ */
+function renderPengumuman(){
+  const items=DB.pengumuman.map(a=>`<div style="background:var(--bg);border:1px solid var(--b1);border-radius:var(--r);padding:12px 14px;display:flex;justify-content:space-between;align-items:flex-start;gap:10px;margin-bottom:9px">
+    <div style="flex:1">
+      <div style="font-size:.88rem;font-weight:700;color:var(--ink);margin-bottom:3px">
+        <span class="bs2 ${a.prioritas==='info'?'bh':a.prioritas==='warn'?'bi':'ba'}" style="margin-right:6px">${a.prioritas==='info'?'ℹ️ Info':a.prioritas==='warn'?'⚠️ Penting':'🚨 Darurat'}</span>
+        ${a.judul}
+      </div>
+      <div style="font-size:.78rem;color:var(--ink2);line-height:1.5">${a.isi}</div>
+      <div style="font-size:.68rem;color:var(--muted);margin-top:4px">📅 ${fmtD(a.tanggal)}</div>
+    </div>
+    <div style="display:flex;gap:4px;flex-shrink:0">
+      <button class="btn btn-ghost btn-xs" onclick="editAnn(${a.id})">✏️</button>
+      <button class="btn btn-red btn-xs" onclick="delAnn(${a.id})">🗑️</button>
+    </div>
+  </div>`).join('');
+  return`
+  <div class="sh"><div><h2>📢 Pengumuman Eskul</h2><p>Informasi dan arahan penting untuk anggota robotik</p></div>
+    <button class="btn btn-p" onclick="openAnn()">+ Buat Pengumuman</button></div>
+  <div class="card"><div class="cb">${items||'<p style="text-align:center;color:var(--muted);padding:18px;font-size:.82rem">Belum ada pengumuman</p>'}</div></div>`;
+}
+function openAnn(id=null){
+  const a=id?DB.pengumuman.find(x=>x.id===id):null;
+  document.getElementById('mc2').innerHTML=`
+  <div class="mbk" onclick="closeOut(event)"><div class="modal">
+    <h3>${a?'Edit':'Buat'} Pengumuman</h3>
+    <div class="fg"><label>Judul</label><input id="aj" value="${a?a.judul:''}" placeholder="Judul pengumuman"/></div>
+    <div class="fg"><label>Isi</label><textarea id="ai" rows="3" placeholder="Isi pengumuman...">${a?a.isi:''}</textarea></div>
+    <div class="fr">
+      <div class="fg"><label>Prioritas</label>
+        <select id="ap">
+          <option value="info" ${!a||a.prioritas==='info'?'selected':''}>ℹ️ Info</option>
+          <option value="warn" ${a?.prioritas==='warn'?'selected':''}>⚠️ Penting</option>
+          <option value="alert" ${a?.prioritas==='alert'?'selected':''}>🚨 Darurat</option>
+        </select>
+      </div>
+      <div class="fg"><label>Tanggal</label><input type="date" id="ad2" value="${a?a.tanggal:new Date().toISOString().slice(0,10)}"/></div>
+    </div>
+    <div class="mf"><button class="btn btn-ghost" onclick="closeModal()">Batal</button><button class="btn btn-p" onclick="saveAnn(${id||'null'})">💾 Simpan</button></div>
+  </div></div>`;
+}
+function editAnn(id){openAnn(id)}
+function saveAnn(id){
+  const j=document.getElementById('aj').value.trim(),i=document.getElementById('ai').value.trim(),p=document.getElementById('ap').value,d=document.getElementById('ad2').value;
+  if(!j||!i){alert('Isi judul dan isi.');return}
+  if(id)Object.assign(DB.pengumuman.find(x=>x.id===id),{judul:j,isi:i,prioritas:p,tanggal:d});
+  else DB.pengumuman.push({id:DB.nextId.pengumuman++,judul:j,isi:i,prioritas:p,tanggal:d});
+  saveDB(DB);closeModal();nav('pengumuman');toast('Pengumuman disimpan!');
+}
+function delAnn(id){
+  if(!confirm('Hapus pengumuman ini?'))return;
+  DB.pengumuman=DB.pengumuman.filter(x=>x.id!==id);
+  saveDB(DB);nav('pengumuman');toast('Dihapus');
+}
+
+function renderJadwal(){
+  const items=DB.jadwal.sort((a,b)=>a.tanggal.localeCompare(b.tanggal)).map(j=>{
+    const[,m,d]=j.tanggal.split('-');
+    return`<div style="background:var(--bg);border:1px solid var(--b1);border-radius:var(--r);padding:12px 14px;display:flex;align-items:center;gap:12px;margin-bottom:8px">
+      <div style="text-align:center;padding:7px 10px;background:#fff;border-radius:7px;border:1px solid var(--b1);flex-shrink:0">
+        <div style="font-size:1.25rem;font-weight:900;color:var(--blue);font-family:'Space Grotesk'">${d}</div>
+        <div style="font-size:.65rem;font-weight:700;color:var(--muted);text-transform:uppercase">${['Jan','Feb','Mar','Apr','Mei','Jun','Jul','Agu','Sep','Okt','Nov','Des'][+m-1]}</div>
+      </div>
+      <div style="flex:1">
+        <div style="font-size:.88rem;font-weight:700;color:var(--ink)">${j.topik}</div>
+        <div style="font-size:.74rem;color:var(--muted);margin-top:2px">⏰ ${j.waktu} · 📍 ${j.lokasi}</div>
+      </div>
+      <div style="display:flex;gap:4px;flex-shrink:0">
+        <button class="btn btn-ghost btn-xs" onclick="editJad(${j.id})">✏️</button>
+        <button class="btn btn-red btn-xs" onclick="delJad(${j.id})">🗑️</button>
+      </div>
+    </div>`;
+  }).join('');
+  return`
+  <div class="sh"><div><h2>🗓️ Jadwal Pertemuan Latihan</h2><p>Latihan rutin setiap hari Senin di Lab Komputer Lt. 2</p></div>
+    <button class="btn btn-p" onclick="openJad()">+ Tambah Jadwal</button></div>
+  <div class="card"><div class="cb">${items||'<p style="text-align:center;color:var(--muted);padding:18px;font-size:.82rem">Belum ada jadwal</p>'}</div></div>`;
+}
+function openJad(id=null){
+  const j=id?DB.jadwal.find(x=>x.id===id):null;
+  document.getElementById('mc2').innerHTML=`
+  <div class="mbk" onclick="closeOut(event)"><div class="modal">
+    <h3>${j?'Edit':'Tambah'} Jadwal Latihan</h3>
+    <div class="fg"><label>Topik Latihan</label><input id="jt" value="${j?j.topik:''}" placeholder="Pertemuan 4 – PID Controller"/></div>
+    <div class="fr">
+      <div class="fg"><label>Tanggal</label><input type="date" id="jd" value="${j?j.tanggal:''}"/></div>
+      <div class="fg"><label>Waktu</label><input id="jw" value="${j?j.waktu:'15:30–17:00'}"/></div>
+    </div>
+    <div class="fg"><label>Lokasi</label><input id="jl" value="${j?j.lokasi:'Lab Komputer Lt.2'}"/></div>
+    <div class="mf"><button class="btn btn-ghost" onclick="closeModal()">Batal</button><button class="btn btn-p" onclick="saveJad(${id||'null'})">💾 Simpan</button></div>
+  </div></div>`;
+}
+function editJad(id){openJad(id)}
+function saveJad(id){
+  const t=document.getElementById('jt').value.trim(),d=document.getElementById('jd').value,w=document.getElementById('jw').value.trim(),l=document.getElementById('jl').value.trim();
+  if(!t||!d){alert('Topik dan tanggal wajib.');return}
+  if(id)Object.assign(DB.jadwal.find(x=>x.id===id),{topik:t,tanggal:d,waktu:w,lokasi:l});
+  else DB.jadwal.push({id:DB.nextId.jadwal++,topik:t,tanggal:d,waktu:w,lokasi:l});
+  saveDB(DB);closeModal();nav('jadwal');toast('Jadwal disimpan!');
+}
+function delJad(id){
+  if(!confirm('Hapus jadwal ini?'))return;
+  DB.jadwal=DB.jadwal.filter(x=>x.id!==id);
+  saveDB(DB);nav('jadwal');toast('Jadwal dihapus');
+}
+
+/* ════════════════════════════════
+   ADMIN: PENGATURAN & DEVICE LOCK
+════════════════════════════════ */
+function renderPengaturan(){
+  const sa=DB.sesi.find(s=>s.kodeAktif);
+
+  let lockedStudentsHtml='';
+  if(sa && DB.deviceLock && DB.deviceLock[sa.id]){
+    const devEntries = Object.entries(DB.deviceLock[sa.id]);
+    if(devEntries.length>0){
+      lockedStudentsHtml = `
+      <div style="margin-top:14px;background:#f8fafc;border:1px solid var(--b1);border-radius:8px;padding:12px">
+        <div style="font-size:.78rem;font-weight:700;color:var(--ink);margin-bottom:8px;display:flex;justify-content:space-between;align-items:center">
+          <span>📱 Siswa Terkunci di Sesi Aktif (${sa.pertemuan}):</span>
+          <span style="font-size:.7rem;color:var(--muted);background:#fff;padding:2px 8px;border-radius:99px;border:1px solid var(--b1)">${devEntries.length} Perangkat</span>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:6px;max-height:160px;overflow-y:auto">
+          ${devEntries.map(([dev, aid])=>{
+            const a = DB.anggota.find(x=>x.id===aid);
+            return `
+            <div style="display:flex;align-items:center;justify-content:space-between;background:#fff;padding:6px 10px;border-radius:6px;border:1px solid var(--b1);font-size:.78rem">
+              <div>
+                <strong>${a?.nama||'Siswa #'+aid}</strong>
+                <span style="font-size:.68rem;color:var(--muted);margin-left:4px">(${a?.kelas||'-'})</span>
+              </div>
+              <button class="btn btn-ghost btn-xs" onclick="resetDevSiswa(${aid},'${(a?.nama||'').replace(/'/g,"\\'")}')" style="color:var(--blue);border-color:var(--blue)">🔓 Buka Kunci</button>
+            </div>`;
+          }).join('')}
+        </div>
+      </div>`;
+    } else {
+      lockedStudentsHtml = `
+      <div style="margin-top:10px;font-size:.74rem;color:var(--muted);font-style:italic">
+        Belum ada HP yang terkunci di sesi aktif (${sa.pertemuan}).
+      </div>`;
+    }
+  } else {
+    lockedStudentsHtml = `
+    <div style="margin-top:10px;font-size:.74rem;color:var(--muted);font-style:italic">
+      Tidak ada sesi aktif saat ini. Buka sesi di menu 📅 Sesi & Token untuk memulai presensi.
+    </div>`;
+  }
+
+  const siswaOpts = [...DB.anggota]
+    .sort((a,b)=>a.nama.localeCompare(b.nama))
+    .map(a=>`<option value="${a.id}">${a.nama} (${a.kelas})</option>`)
+    .join('');
+
+  return`
+  <div class="sh"><div><h2>⚙️ Pengaturan Sistem</h2><p>Konfigurasi keamanan 1 HP 1 Siswa, Token, dan Database</p></div></div>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px">
+
+    <!-- CARD 1: RESET DEVICE LOCK -->
+    <div class="card" style="margin-bottom:0;grid-column:1/-1">
+      <div class="ch">
+        <h3>🔓 Pengaturan Device Lock (1 HP 1 Siswa)</h3>
+        <span class="bs2 bg2">Keamanan Aktif</span>
+      </div>
+      <div class="cb">
+        <p style="font-size:.78rem;color:var(--muted);margin-bottom:14px;line-height:1.6">
+          Sistem secara otomatis mengunci perangkat agar 1 HP hanya bisa presensi untuk 1 siswa per sesi.<br>
+          ⚡ <strong>Otomatis:</strong> Setiap kali admin <strong>ganti token</strong> atau buka sesi baru, seluruh lock HP sesi tersebut <strong>otomatis direset</strong>.<br>
+          👤 <strong>Manual:</strong> Gunakan opsi di bawah ini jika ingin membuka kunci siswa tertentu tanpa mengganti token:
+        </p>
+
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:12px">
+          <div style="background:var(--bg);border:1px solid var(--b1);border-radius:8px;padding:14px">
+            <div style="font-weight:700;font-size:.82rem;color:var(--ink);margin-bottom:3px">👤 Reset HP per Siswa</div>
+            <p style="font-size:.72rem;color:var(--muted);margin-bottom:9px">Pilih siswa yang HP-nya bermasalah atau ingin absen dari HP lain.</p>
+            <div class="fg" style="margin-bottom:9px">
+              <label>Pilih Siswa</label>
+              <select id="dlSiswa">
+                <option value="">-- Pilih Siswa --</option>
+                ${siswaOpts}
+              </select>
+            </div>
+            <button class="btn btn-p btn-sm" onclick="resetDevSiswaFromSetting()">🔓 Buka Kunci Siswa Ini</button>
+          </div>
+
+          <div style="background:var(--bg);border:1px solid var(--b1);border-radius:8px;padding:14px">
+            <div style="font-weight:700;font-size:.82rem;color:var(--ink);margin-bottom:3px">📅 Reset Lock per Sesi</div>
+            <p style="font-size:.72rem;color:var(--muted);margin-bottom:9px">Bersihkan semua kunci HP untuk satu pertemuan tertentu.</p>
+            <div class="fg" style="margin-bottom:9px">
+              <label>Pilih Sesi</label>
+              <select id="dlSesi">
+                ${DB.sesi.map(s=>`<option value="${s.id}" ${s.kodeAktif?'selected':''}>${s.pertemuan} ${s.kodeAktif?'(Aktif)':''}</option>`).join('')}
+              </select>
+            </div>
+            <button class="btn btn-ghost btn-sm" onclick="resetDL()">🔓 Reset Lock Sesi Terpilih</button>
+          </div>
+
+          <div style="background:var(--bg);border:1px solid var(--b1);border-radius:8px;padding:14px">
+            <div style="font-weight:700;font-size:.82rem;color:var(--ink);margin-bottom:3px">⚡ Reset Semua HP Sekaligus</div>
+            <p style="font-size:.72rem;color:var(--muted);margin-bottom:9px">Kosongkan seluruh data penguncian HP di semua sesi latihan.</p>
+            <div style="height:36px"></div>
+            <button class="btn btn-red btn-sm" onclick="resetAllDL()">⚡ Bersihkan Semua Lock HP</button>
+          </div>
+        </div>
+
+        ${lockedStudentsHtml}
+      </div>
+    </div>
+
+    <!-- CARD 2: GANTI PASSWORD -->
+    <div class="card" style="margin-bottom:0">
+      <div class="ch"><h3>🔑 Ganti Password Admin</h3></div>
+      <div class="cb">
+        <div class="fg"><label>Password Baru</label><input type="password" id="np" placeholder="Min. 6 karakter"/></div>
+        <div class="fg"><label>Konfirmasi Password</label><input type="password" id="cp" placeholder="Ulangi password"/></div>
+        <button class="btn btn-p btn-sm" onclick="gantiPass()">Simpan Password</button>
+      </div>
+    </div>
+
+    <!-- CARD 3: RESET DATABASE -->
+    <div class="card" style="margin-bottom:0">
+      <div class="ch"><h3>🗃️ Reset Database</h3></div>
+      <div class="cb">
+        <p style="font-size:.78rem;color:var(--muted);margin-bottom:11px;line-height:1.6">Kembalikan seluruh data anggota, sesi, absensi, dan pengaturan ke data default bawaan.</p>
+        <button class="btn btn-red btn-sm" onclick="resetData()">🔄 Reset Semua Data</button>
+      </div>
+    </div>
+
+    <!-- CARD CLOUD FIREBASE -->
+    <div class="card" style="margin-bottom:0;grid-column:1/-1">
+      <div class="ch" style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px">
+        <h3>☁️ Database Online (Google Firebase Realtime)</h3>
+        <span class="badge" style="background:${fbConnected?'#dcfce7':'#f1f5f9'};color:${fbConnected?'#15803d':'#64748b'};font-weight:700">
+          ${fbConnected ? '🟢 Cloud Online (Realtime Sync)' : '🟡 Mode Lokal (Belum Terkoneksi Cloud)'}
+        </span>
+      </div>
+      <div class="cb">
+        <p style="font-size:.78rem;color:var(--muted);margin-bottom:12px;line-height:1.6">
+          Dengan menghubungkan ke Google Firebase, data absensi otomatis tersimpan di cloud dan tersinkronisasi langsung ke semua HP siswa & laptop secara online tanpa perlu laptop menyala terus.
+        </p>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:14px;background:var(--bg);border:1px solid var(--b1);border-radius:8px;padding:14px">
+          <div>
+            <label class="glabel" style="margin-bottom:6px">Konfigurasi Firebase (Salin dari Firebase Console)</label>
+            <textarea id="fbConfigInput" rows="6" style="width:100%;font-family:monospace;font-size:.72rem;padding:8px;border:1px solid var(--b1);border-radius:6px;resize:vertical;background:#fff;line-height:1.4" placeholder='{\n  "apiKey": "AIzaSy...",\n  "authDomain": "proyek.firebaseapp.com",\n  "databaseURL": "https://proyek-default-rtdb.firebaseio.com",\n  "projectId": "proyek-id",\n  "storageBucket": "proyek.appspot.com",\n  "messagingSenderId": "...",\n  "appId": "..."\n}'>${getFBConfig() ? JSON.stringify(getFBConfig(), null, 2) : ''}</textarea>
+            <div style="margin-top:8px;display:flex;gap:8px;flex-wrap:wrap">
+              <button class="btn btn-p btn-sm" onclick="saveFirebaseConfigFromUI()">💾 Simpan & Hubungkan</button>
+              <button class="btn btn-ghost btn-sm" onclick="clearFirebaseConfig()">Hapus Config</button>
+              <button class="btn btn-sec btn-sm" onclick="uploadLocalToFirebase()">📤 Upload Data Lokal ke Cloud</button>
+            </div>
+          </div>
+          <div style="font-size:.76rem;color:var(--muted);line-height:1.7">
+            <strong style="color:var(--ink)">📖 Cara Cepat Menghubungkan Firebase (3 Menit):</strong>
+            <ol style="margin:6px 0 0 16px;padding:0">
+              <li>Buka <a href="https://console.firebase.google.com" target="_blank" style="color:var(--blue);font-weight:700">console.firebase.google.com</a> & buat proyek baru.</li>
+              <li>Pilih menu <strong>Build → Realtime Database</strong> → Klik <strong>Create Database</strong> (Pilih lokasi Singapore, Test Mode).</li>
+              <li>Buka <strong>Project Settings (⚙️)</strong> → Tambah Web App (<code>&lt;/&gt;</code>) → Salin kode <code>firebaseConfig</code>.</li>
+              <li>Paste di kotak konfigurasi ini, lalu klik <strong>Simpan & Hubungkan</strong>!</li>
+            </ol>
+            <div style="margin-top:10px;padding:8px 10px;background:rgba(30,58,138,.05);border-radius:6px;border:1px dashed var(--b1)">
+              💡 <em>Tips:</em> Kamu juga bisa paste langsung ke file <code>firebase-config.js</code> di folder project.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CARD 4: INFO SISTEM -->
+    <div class="card" style="margin-bottom:0;grid-column:1/-1">
+      <div class="ch"><h3>📊 Informasi Sistem & Keamanan</h3></div>
+      <div class="cb" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:12px;font-size:.78rem;color:var(--muted);line-height:1.75">
+        <div>Versi: <strong style="color:var(--ink)">v4.3</strong></div>
+        <div>Database: <strong style="color:${fbConnected?'var(--green)':'var(--blue)'}">${fbConnected?'🟢 Cloud Firebase Realtime':'☁️ Mode Lokal'}</strong></div>
+        <div>Total Anggota: <strong style="color:var(--ink)">${DB.anggota.length} Siswa</strong></div>
+        <div>Total Sesi: <strong style="color:var(--ink)">${DB.sesi.length} Pertemuan</strong></div>
+        <div>Tahun Ajaran: <strong style="color:var(--ink)">2026 / 2027</strong></div>
+        <div>Device Lock: <strong style="color:var(--green)">1 HP 1 Siswa (Auto Reset saat Ganti Token)</strong></div>
+        <div>Geofence: <strong style="color:var(--ink)">Radius 150m · MAN 19 Jaksel</strong></div>
+        <div>Ketua Eskul: <strong style="color:var(--ink)">Arfa Safaraz Azis (0857-0982-8152)</strong></div>
+      </div>
+    </div>
+
+  </div>`;
+}
+
+function gantiPass(){
+  const np=document.getElementById('np').value,cp=document.getElementById('cp').value;
+  if(np.length<6){alert('Min. 6 karakter.');return}
+  if(np!==cp){alert('Password tidak sama.');return}
+  DB.adminPass=np;saveDB(DB);toast('Password diubah!');
+  document.getElementById('np').value='';document.getElementById('cp').value='';
+}
+function resetDLSesi(id){
+  const s = DB.sesi.find(x=>x.id===id);
+  const name = s ? s.pertemuan : `Sesi #${id}`;
+  if(!confirm(`Reset lock HP untuk ${name}?\n\nSemua HP yang sudah absen di sesi ini akan bisa dipakai lagi.`)) return;
+  if(!DB.deviceLock) DB.deviceLock={};
+  DB.deviceLock[id]={};
+  saveDB(DB);
+  if(document.getElementById('nl-sesi')?.classList.contains('on')) nav('sesi');
+  else if(document.getElementById('nl-pengaturan')?.classList.contains('on')) nav('pengaturan');
+  else if(document.getElementById('nl-dashboard')?.classList.contains('on')) nav('dashboard');
+  toast(`Lock HP untuk ${name} berhasil direset!`);
+}
+function resetDL(){
+  const id=parseInt(document.getElementById('dlSesi')?.value);
+  if(!id){alert('Pilih sesi dulu.');return}
+  resetDLSesi(id);
+}
+function resetDevSiswaFromSetting(){
+  const aid=parseInt(document.getElementById('dlSiswa')?.value);
+  if(!aid){alert('Pilih siswa yang ingin direset terlebih dahulu.');return;}
+  const a=DB.anggota.find(x=>x.id===aid);
+  resetDevSiswa(aid, a?a.nama:'');
+}
+function resetAllDL(){
+  if(!confirm('Reset SEMUA penguncian HP untuk seluruh siswa dan sesi? Semua HP akan bebas digunakan kembali.')) return;
+  DB.deviceLock={};
+  saveDB(DB);
+  if(document.getElementById('nl-pengaturan')?.classList.contains('on')) nav('pengaturan');
+  else if(document.getElementById('nl-dashboard')?.classList.contains('on')) nav('dashboard');
+  toast('Semua device lock berhasil dibersihkan!');
+}
+
+function saveFirebaseConfigFromUI(){
+  const txt = document.getElementById('fbConfigInput')?.value.trim();
+  if(!txt){alert('Harap masukkan konfigurasi Firebase.'); return;}
+  try {
+    let cfg = null;
+    if(txt.includes('{')){
+      const clean = txt.replace(/^[^{]*/, '').replace(/[^}]*$/, '');
+      try {
+        cfg = JSON.parse(clean);
+      } catch(e) {
+        cfg = new Function('return ' + clean)();
+      }
+    }
+    if(cfg && cfg.apiKey){
+      localStorage.setItem('rbk_firebase_custom_cfg', JSON.stringify(cfg));
+      alert('Konfigurasi Firebase disimpan! Sedang menghubungkan...');
+      initFirebase();
+      renderPengaturan();
+    } else {
+      alert('Konfigurasi tidak lengkap. Pastikan memiliki apiKey dan databaseURL.');
+    }
+  } catch(e){
+    alert('Format konfigurasi tidak valid: ' + e.message);
+  }
+}
+
+function clearFirebaseConfig(){
+  if(!confirm('Hapus konfigurasi Firebase dari browser ini?')) return;
+  localStorage.removeItem('rbk_firebase_custom_cfg');
+  fbConnected = false;
+  location.reload();
+}
+
+function uploadLocalToFirebase(){
+  if(!fbRef){
+    alert('Firebase belum terhubung. Harap simpan konfigurasi Firebase yang valid terlebih dahulu.');
+    return;
+  }
+  fbRef.set(DB).then(()=>{
+    toast('Data lokal berhasil di-upload ke Cloud Firebase!');
+    renderPengaturan();
+  }).catch(e=>{
+    alert('Gagal upload: ' + e.message);
+  });
+}
+</script>
+</body>
+</html>
